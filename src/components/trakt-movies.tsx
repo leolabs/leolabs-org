@@ -1,27 +1,15 @@
-import styled from '../util/styled-components';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { MediaGrid, Medium, MediumTitle } from './media-grid';
 import GatsbyImage from 'gatsby-image';
-
-const MoviesGrid = styled.div`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-`;
-
-const Movie = styled.a`
-  display: block;
-  overflow: hidden;
-  border-radius: ${p => p.theme.borderRadius.normal};
-`;
 
 const generateLink = (slug: string) => `https://trakt.tv/movies/${slug}`;
 
 interface TraktMoviesProps {
-  maxMovies?: number;
+  limit?: number;
 }
 
-export const TraktMovies: React.FC<TraktMoviesProps> = ({ maxMovies }) => {
+export const TraktMovies: React.FC<TraktMoviesProps> = ({ limit }) => {
   const movies = useStaticQuery(graphql`
     query {
       allTraktWatchedMovie(
@@ -55,9 +43,9 @@ export const TraktMovies: React.FC<TraktMoviesProps> = ({ maxMovies }) => {
   `);
 
   return (
-    <MoviesGrid>
-      {movies.allTraktWatchedMovie.edges.slice(0, maxMovies || 5).map(e => (
-        <Movie
+    <MediaGrid>
+      {movies.allTraktWatchedMovie.edges.slice(0, limit || 5).map(e => (
+        <Medium
           title={`${e.node.tmdb_metadata.title} (watched ${e.node.last_watched_at})`}
           target="_blank"
           href={generateLink(e.node.movie.ids.slug)}
@@ -67,8 +55,9 @@ export const TraktMovies: React.FC<TraktMoviesProps> = ({ maxMovies }) => {
             fluid={e.node.tmdb_metadata.poster.localFile.childImageSharp.fluid}
             alt={`Movie poster for ${e.node.tmdb_metadata.title}`}
           />
-        </Movie>
+          <MediumTitle>{e.node.last_watched_at}</MediumTitle>
+        </Medium>
       ))}
-    </MoviesGrid>
+    </MediaGrid>
   );
 };

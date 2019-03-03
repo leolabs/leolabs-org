@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from '../components/layout';
 import styled from '../util/styled-components';
 import { Intro } from '../components/intro';
-import { TraktMovies } from '../components/trakt-grid';
+import { TraktMovies } from '../components/trakt-movies';
 
 const IntroContainer = styled.main`
   display: flex;
