@@ -99,6 +99,8 @@ export const Portrait: React.FC = () => {
           onPlaying={() => setVideoLoaded(true)}
         >
           <source type="video/webm" src="/assets/portrait-video.webm" />
+          <source type="video/mp4" src="/assets/portrait-video.mp4" />
+          <source type="video/ogg" src="/assets/portrait-video.ogv" />
         </Video>
       </PortraitSizer>
     </PortraitCircle>
