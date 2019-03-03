@@ -13,6 +13,7 @@ interface LayoutProps {
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
+    color: ${p => p.theme.colors.text};
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   }
 
@@ -41,6 +42,15 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${p => p.theme.fontSizes.p};
     line-height: 1.6;
     margin-top: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline ${p => p.theme.colors.brand};
+
+    &:hover, &:focus {
+      color: ${p => p.theme.colors.text};
+    }
   }
 `;
 
