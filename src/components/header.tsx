@@ -3,11 +3,19 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const StyledHeader = styled.header`
-  display: flex;
-  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+`;
+
+const Container = styled.div`
   margin: auto;
   max-width: ${p => p.theme.dimensions.maxWidth};
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem 3rem;
 `;
 
 const Title = styled(Link)`
@@ -26,18 +34,28 @@ const MenuItem = styled(Link)`
   text-decoration: none;
   color: inherit;
   margin-left: 2rem;
+
+  opacity: 0.5;
+  transition: opacity 0.2s;
+
+  &.active,
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const Header: React.FC = () => (
   <StyledHeader>
-    <Title to="/">Hi, I'm Leo.</Title>
-    <Menu>
-      <MenuItem to="/" activeClassName="active">
-        About Me
-      </MenuItem>
-      <MenuItem to="/blog" activeClassName="active">
-        Blog
-      </MenuItem>
-    </Menu>
+    <Container>
+      <Title to="/">Hi, I'm Leo.</Title>
+      <Menu>
+        <MenuItem to="/" activeClassName="active">
+          About Me
+        </MenuItem>
+        <MenuItem to="/blog" activeClassName="active">
+          Blog
+        </MenuItem>
+      </Menu>
+    </Container>
   </StyledHeader>
 );

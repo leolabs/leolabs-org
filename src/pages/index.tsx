@@ -9,7 +9,8 @@ const IntroContainer = styled.main`
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  min-height: calc(100vh - 14rem);
+  padding-top: 100px;
+  min-height: calc(100vh - 8rem);
 `;
 
 const Section = styled.section`
