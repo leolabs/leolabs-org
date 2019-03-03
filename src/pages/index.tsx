@@ -3,6 +3,8 @@ import { Layout } from '../components/layout';
 import styled from '../util/styled-components';
 import { Intro } from '../components/intro';
 import { TraktMovies } from '../components/trakt-movies';
+import { TraktShows } from '../components/trakt-shows';
+import { SpotifyTracks } from '../components/spotify-tracks';
 
 const IntroContainer = styled.main`
   display: flex;
@@ -28,8 +30,18 @@ const IndexPage = () => {
       </IntroContainer>
 
       <Section>
+        <h3>Music I'm listening to</h3>
+        <SpotifyTracks />
+      </Section>
+
+      <Section>
         <h3>Movies I watched</h3>
         <TraktMovies />
+      </Section>
+
+      <Section>
+        <h3>Shows I'm watching</h3>
+        <TraktShows />
       </Section>
     </Layout>
   );
