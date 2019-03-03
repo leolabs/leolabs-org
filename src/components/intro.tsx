@@ -10,7 +10,7 @@ import GitHubIcon from '../images/social-icons/github.svg';
 
 const IntroBox = styled.div`
   width: 100%;
-  max-width: 30rem;
+  max-width: 35rem;
   padding: 2rem;
   text-align: center;
   display: flex;

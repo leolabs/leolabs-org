@@ -12,7 +12,7 @@ export default {
     h3: '1.953rem',
     h4: '1.563rem',
     h5: '1.25rem',
-    p: '1rem',
+    p: '1.125rem',
   },
   borderRadius: {
     normal: '0.5rem',

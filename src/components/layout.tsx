@@ -38,7 +38,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    line-height: 1.5;
+    font-size: ${p => p.theme.fontSizes.p};
+    line-height: 1.6;
     margin-top: 0;
   }
 `;
