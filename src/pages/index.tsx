@@ -9,7 +9,7 @@ const IntroContainer = styled.main`
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  height: calc(100vh - 14rem);
+  min-height: calc(100vh - 14rem);
 `;
 
 const Section = styled.section`
