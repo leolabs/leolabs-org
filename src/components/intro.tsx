@@ -10,11 +10,9 @@ import GitHubIcon from '../images/social-icons/github.svg';
 
 const IntroBox = styled.div`
   width: 100%;
-  max-width: 35rem;
+  max-width: ${p => p.theme.dimensions.maxWidth};
   padding: 2rem;
-  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
 `;
 
@@ -51,6 +49,18 @@ const Video = styled.video<{ loaded: boolean }>`
   transition: opacity 0.2s;
   opacity: ${p => (p.loaded ? 1 : 0)};
   z-index: 2;
+`;
+
+const IntroText = styled.div`
+  h2 {
+    color: ${p => p.theme.colors.brand};
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 3rem;
+    font-weight: 300;
+  }
 `;
 
 const Social = styled.div`
@@ -112,26 +122,28 @@ export const Portrait: React.FC = () => {
 export const Intro: React.FC = () => {
   return (
     <IntroBox>
-      <Portrait />
-      <h2>Hey there!</h2>
-      <p>
-        My name is Leo Bernard. I'm a Stu­dent, Mu­si­cian and De­vel­oper.
-        <br />I love Pho­tog­ra­phy, Movies, Com­put­ers, Mu­sic and Cats.
-      </p>
-      <Social>
-        <SocialItem target="_blank" href="https://twitter.com/leolabs_org">
-          <img src={TwitterIcon} alt="Twitter" />
-        </SocialItem>
-        <SocialItem target="_blank" href="https://github.com/leolabs">
-          <img src={GitHubIcon} alt="GitHub" />
-        </SocialItem>
-        <SocialItem target="_blank" href="https://open.spotify.com/user/leolabs">
-          <img src={SpotifyIcon} alt="Spotify" />
-        </SocialItem>
-        <SocialItem target="_blank" href="https://trakt.tv/leolabs">
-          <img src={TraktTvIcon} alt="TraktTv" />
-        </SocialItem>
-      </Social>
+      <IntroText>
+        <h2>Hey there!</h2>
+        <p>
+          My name is Leo Bernard. I'm a Stu­dent, Mu­si­cian and Developer at{' '}
+          <a href="https://crisp.studio">Crisp Studio</a>. I love Mu­sic, Movies,
+          Com­put­ers, and Cats.
+        </p>
+        <Social>
+          <SocialItem target="_blank" href="https://twitter.com/leolabs_org">
+            <img src={TwitterIcon} alt="Twitter" />
+          </SocialItem>
+          <SocialItem target="_blank" href="https://github.com/leolabs">
+            <img src={GitHubIcon} alt="GitHub" />
+          </SocialItem>
+          <SocialItem target="_blank" href="https://open.spotify.com/user/leolabs">
+            <img src={SpotifyIcon} alt="Spotify" />
+          </SocialItem>
+          <SocialItem target="_blank" href="https://trakt.tv/leolabs">
+            <img src={TraktTvIcon} alt="TraktTv" />
+          </SocialItem>
+        </Social>
+      </IntroText>
     </IntroBox>
   );
 };

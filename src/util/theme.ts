@@ -1,7 +1,7 @@
 export default {
   colors: {
-    text: '#333',
-    brand: '#006bb7',
+    text: '#17252A',
+    brand: '#3AAFA9', //'#006bb7',
   },
   dimensions: {
     maxWidth: '80rem',
