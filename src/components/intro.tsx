@@ -29,6 +29,7 @@ const PortraitSizer = styled.div`
   position: relative;
   height: 0;
   padding-bottom: 100%;
+  overflow: hidden;
 `;
 
 const Image = styled(GatsbyImage)`
