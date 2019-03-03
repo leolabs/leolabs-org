@@ -23,6 +23,7 @@ const PortraitCircle = styled.div`
   max-width: 16rem;
   border-radius: 1000px;
   overflow: hidden;
+  transform: translateZ(0);
 `;
 
 const PortraitSizer = styled.div`
