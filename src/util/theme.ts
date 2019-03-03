@@ -4,7 +4,7 @@ export default {
     brand: '#006bb7',
   },
   dimensions: {
-    maxWidth: '56rem',
+    maxWidth: '80rem',
   },
   fontSizes: {
     h1: '3.052rem',
