@@ -39,7 +39,7 @@ export const SpotifyTracks: React.FC<SpotifyTracksProps> = ({ limit }) => {
 
   return (
     <MediaGrid>
-      {tracks.allSpotifyTopTrack.edges.slice(0, limit || 5).map(e => (
+      {tracks.allSpotifyTopTrack.edges.slice(0, limit || 6).map(e => (
         <Medium
           title={`${e.node.name}`}
           target="_blank"

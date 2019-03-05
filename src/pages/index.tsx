@@ -11,8 +11,8 @@ const IntroContainer = styled.main`
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: 100px;
-  min-height: calc(100vh - 8rem);
+  padding: 100px 0;
+  min-height: calc(100vh);
 `;
 
 const Section = styled.section`

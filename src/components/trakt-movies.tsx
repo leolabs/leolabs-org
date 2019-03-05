@@ -44,7 +44,7 @@ export const TraktMovies: React.FC<TraktMoviesProps> = ({ limit }) => {
 
   return (
     <MediaGrid>
-      {movies.allTraktWatchedMovie.edges.slice(0, limit || 5).map(e => (
+      {movies.allTraktWatchedMovie.edges.slice(0, limit || 6).map(e => (
         <Medium
           title={`${e.node.tmdb_metadata.title} (watched ${e.node.last_watched_at})`}
           target="_blank"
