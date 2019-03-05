@@ -5,7 +5,6 @@ import GatsbyImage from 'gatsby-image';
 import leftPad from 'left-pad';
 
 const generateLink = (slug: string, seasons: any[]) => {
-  console.log(seasons);
   const { season, episode } = getLatestEpisode(seasons);
   return `https://trakt.tv/shows/${slug}/seasons/${season}/episodes/${episode}`;
 };

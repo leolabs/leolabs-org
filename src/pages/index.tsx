@@ -5,6 +5,9 @@ import { Intro } from '../components/intro';
 import { TraktMovies } from '../components/trakt-movies';
 import { TraktShows } from '../components/trakt-shows';
 import { SpotifyTracks } from '../components/spotify-tracks';
+import { SpotifyPlaylists } from '../components/spotify-playlists';
+
+import featuredPlaylists from '../../data/featured-playlists.json';
 
 const IntroContainer = styled.main`
   display: flex;
@@ -28,6 +31,11 @@ const IndexPage = () => {
       <IntroContainer>
         <Intro />
       </IntroContainer>
+
+      <Section>
+        <h3>Featured Playlists</h3>
+        <SpotifyPlaylists featured={featuredPlaylists} />
+      </Section>
 
       <Section>
         <h3>Music I'm listening to</h3>
