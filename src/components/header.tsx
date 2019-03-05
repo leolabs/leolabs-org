@@ -16,6 +16,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 2rem 3rem;
+
+  @media (max-width: 700px) {
+    padding: 1rem 1.3rem;
+  }
 `;
 
 const Title = styled(Link)`
