@@ -85,7 +85,7 @@ export const TraktShows: React.FC<TraktShowsProps> = ({ limit }) => {
 
   return (
     <MediaGrid>
-      {shows.allTraktWatchedShow.edges.slice(0, limit || 5).map(e => (
+      {shows.allTraktWatchedShow.edges.slice(0, limit || 6).map(e => (
         <Medium
           title={`${e.node.tmdb_metadata.name} (watched ${e.node.last_watched_at})`}
           target="_blank"

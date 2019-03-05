@@ -2,9 +2,17 @@ import React from 'react';
 import styled from '../util/styled-components';
 
 export const MediaGrid = styled.div`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  margin: -1rem;
+
+  &:after {
+    content: '';
+    flex: 0 0 1rem;
+  }
 `;
 
 export const Medium = styled.a`
@@ -14,6 +22,14 @@ export const Medium = styled.a`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   transform: translateZ(0);
+
+  min-width: 150px;
+  margin-right: 1rem;
+  flex-grow: 1;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   transition: box-shadow 0.5s;
 

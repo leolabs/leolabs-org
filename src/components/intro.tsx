@@ -25,6 +25,10 @@ const PortraitCircle = styled.div`
   overflow: hidden;
   transform: translateZ(0);
   margin-bottom: 1rem;
+
+  @media (max-width: 700px) {
+    max-width: 12rem;
+  }
 `;
 
 const PortraitSizer = styled.div`
@@ -65,6 +69,16 @@ const IntroText = styled.div`
   p {
     font-size: 3rem;
     font-weight: 300;
+  }
+
+  @media (max-width: 700px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 `;
 
