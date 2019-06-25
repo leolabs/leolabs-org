@@ -4,7 +4,7 @@ export interface Theme {
   brand: string;
 }
 
-export const themes: { [k: string]: Theme } = {
+export const themes = {
   light: {
     bg: '#fff',
     text: '#17252A',
