@@ -69,7 +69,7 @@ export const TraktShows: React.FC<TraktShowsProps> = ({ limit }) => {
               poster {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 300, quality: 90) {
+                    fluid(maxWidth: 300, maxHeight: 450, quality: 90) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
