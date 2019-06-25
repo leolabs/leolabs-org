@@ -13,26 +13,32 @@ const themeStyles = css`
 
     h1 {
       margin-top: 0;
+      color: var(--color-text);
       font-size: ${dimensions.fontSizes.h1};
     }
 
     h2 {
+      color: var(--color-text);
       font-size: ${dimensions.fontSizes.h2};
     }
 
     h3 {
+      color: var(--color-text);
       font-size: ${dimensions.fontSizes.h3};
     }
 
     h4 {
+      color: var(--color-text);
       font-size: ${dimensions.fontSizes.h4};
     }
 
     h5 {
+      color: var(--color-text);
       font-size: ${dimensions.fontSizes.h5};
     }
 
     p {
+      color: var(--color-text);
       font-size: ${dimensions.fontSizes.p};
       line-height: 1.6;
       margin-top: 0;
