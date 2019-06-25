@@ -6,7 +6,8 @@ import { Link } from 'gatsby';
 const StyledHeader = styled.header`
   position: fixed;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: color-mod(var(--color-bg), alpha(95%));
+  color: var(--color-text);
   backdrop-filter: blur(10px);
   z-index: 10;
 `;
@@ -49,7 +50,7 @@ const MenuItem = styled(Link)`
   }
 `;
 
-export const Header: React.FC = () => (
+export const Header: React.FC<{ page: string }> = ({ page }) => (
   <StyledHeader>
     <Container>
       <Title to="/">Hi, I'm Leo.</Title>
@@ -57,7 +58,11 @@ export const Header: React.FC = () => (
         <MenuItem to="/" activeClassName="active">
           About Me
         </MenuItem>
-        <MenuItem to="/blog" activeClassName="active">
+        <MenuItem
+          to="/blog"
+          activeClassName="active"
+          className={page === 'blog' ? 'active' : ''}
+        >
           Blog
         </MenuItem>
       </Menu>

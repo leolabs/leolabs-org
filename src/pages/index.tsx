@@ -28,7 +28,7 @@ const Section = styled.section`
 
 const IndexPage = () => {
   return (
-    <Layout title="Hi, I'm Leo.">
+    <Layout title="Hi, I'm Leo." page="index">
       <IntroContainer>
         <Intro />
       </IntroContainer>

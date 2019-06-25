@@ -5,6 +5,7 @@ import { ThemeContext } from '../util/theme-context';
 
 interface LayoutProps {
   title: string;
+  page: string;
   useRawTitle?: boolean;
   description?: string;
 }
@@ -21,7 +22,7 @@ export const Layout: React.FC<LayoutProps> = props => {
           <meta name="description" content={props.description} />
           <html lang="en" />
         </Helmet>
-        <Header />
+        <Header page={props.page} />
         {props.children}
       </>
     </ThemeContext>
