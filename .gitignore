@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+# Linaria files
+.linaria-cache/
+
 # Mac files
 .DS_Store
 

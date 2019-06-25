@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from '../components/layout';
-import styled from '../util/styled-components';
+import { styled } from 'linaria/react';
 import { Intro } from '../components/intro';
 import { TraktMovies } from '../components/trakt-movies';
 import { TraktShows } from '../components/trakt-shows';
@@ -8,6 +8,7 @@ import { SpotifyTracks } from '../components/spotify-tracks';
 import { SpotifyPlaylists } from '../components/spotify-playlists';
 
 import featuredPlaylists from '../../data/featured-playlists.json';
+import { dimensions } from '../util/theme';
 
 const IntroContainer = styled.main`
   display: flex;
@@ -20,7 +21,7 @@ const IntroContainer = styled.main`
 
 const Section = styled.section`
   padding: 1rem;
-  max-width: ${p => p.theme.dimensions.maxWidth};
+  max-width: ${dimensions.maxWidth};
   margin: auto;
   margin-bottom: 4rem;
 `;

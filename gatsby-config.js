@@ -1,14 +1,14 @@
 require('dotenv-safe').config();
 require('ts-node').register();
 
-const theme = require('./src/util/theme').default;
+const { themes } = require('./src/util/theme');
 
 module.exports = {
   siteMetadata: {},
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-linaria`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,7 +39,7 @@ module.exports = {
         short_name: `leolabs.org`,
         start_url: `/`,
         background_color: '#fff',
-        theme_color: theme.colors.brand,
+        theme_color: themes.light.brand,
         display: `minimal-ui`,
         icon: `src/images/logo-square.svg`, // This path is relative to the root of the site.
       },

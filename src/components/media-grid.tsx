@@ -1,13 +1,14 @@
 import React from 'react';
-import styled from '../util/styled-components';
+import { styled } from 'linaria/react';
+import { dimensions } from '../util/theme';
 
 export const MediaGrid = styled.div`
   display: flex;
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 1rem;
-  margin: -1rem;
+  padding: 2rem;
+  margin: -2rem;
 
   &:after {
     content: '';
@@ -18,7 +19,7 @@ export const MediaGrid = styled.div`
 export const Medium = styled.a`
   display: block;
   overflow: hidden;
-  border-radius: ${p => p.theme.borderRadius.normal};
+  border-radius: ${dimensions.borderRadius.normal};
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   transform: translateZ(0);
@@ -67,7 +68,7 @@ export const MediumTitle = styled.div`
     }
   }
 
-  ${Medium}:hover & {
+  ${Medium as any}:hover & {
     opacity: 1;
   }
 `;

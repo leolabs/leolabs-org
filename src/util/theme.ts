@@ -1,11 +1,26 @@
-export default {
-  colors: {
+export interface Theme {
+  bg: string;
+  text: string;
+  brand: string;
+}
+
+export const themes: { [k: string]: Theme } = {
+  light: {
+    bg: '#fff',
     text: '#17252A',
-    brand: '#3AAFA9', //'#006bb7',
+    brand: '#964A61', //'#006bb7',
   },
-  dimensions: {
-    maxWidth: '80rem',
+  dark: {
+    bg: '#2c2e33',
+    text: '#efefef',
+    brand: '#964A61', //'#006bb7',
   },
+};
+
+export type Mode = keyof typeof themes;
+
+export const dimensions = {
+  maxWidth: '80rem',
   fontSizes: {
     h1: '3.052rem',
     h2: '2.441rem',

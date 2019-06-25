@@ -1,5 +1,6 @@
-import styled from '../util/styled-components';
-import React, { useState } from 'react';
+import { styled } from 'linaria/react';
+import { dimensions } from '../util/theme';
+import React, { useState, ComponentProps } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 
@@ -10,7 +11,7 @@ import GitHubIcon from '../images/social-icons/github.svg';
 
 const IntroBox = styled.div`
   width: 100%;
-  max-width: ${p => p.theme.dimensions.maxWidth};
+  max-width: ${dimensions.maxWidth};
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -46,7 +47,7 @@ const Image = styled(GatsbyImage)`
   right: 0;
 `;
 
-const Video = styled.video<{ loaded: boolean }>`
+const Video = styled.video<{ loaded: boolean } & ComponentProps<'video'>>`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -60,7 +61,7 @@ const Video = styled.video<{ loaded: boolean }>`
 
 const IntroText = styled.div`
   h2 {
-    color: ${p => p.theme.colors.brand};
+    color: var(--color-brand);
     font-weight: normal;
 
     margin-bottom: 1rem;

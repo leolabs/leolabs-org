@@ -1,8 +1,7 @@
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from '../util/styled-components';
 import Helmet from 'react-helmet';
-import theme from '../util/theme';
 import { Header } from './header';
+import { ThemeContext } from '../util/theme-context';
 
 interface LayoutProps {
   title: string;
@@ -10,55 +9,10 @@ interface LayoutProps {
   description?: string;
 }
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    color: ${p => p.theme.colors.text};
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  }
-
-  h1 {
-    margin-top: 0;
-    font-size: ${p => p.theme.fontSizes.h1}
-  }
-
-  h2 {
-    font-size: ${p => p.theme.fontSizes.h2}
-  }
-
-  h3 {
-    font-size: ${p => p.theme.fontSizes.h3}
-  }
-
-  h4 {
-    font-size: ${p => p.theme.fontSizes.h4}
-  }
-
-  h5 {
-    font-size: ${p => p.theme.fontSizes.h5}
-  }
-
-  p {
-    font-size: ${p => p.theme.fontSizes.p};
-    line-height: 1.6;
-    margin-top: 0;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: underline ${p => p.theme.colors.brand};
-
-    &:hover, &:focus {
-      color: ${p => p.theme.colors.text};
-    }
-  }
-`;
-
 export const Layout: React.FC<LayoutProps> = props => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeContext>
       <>
-        <GlobalStyle />
         <Helmet>
           <title>
             {props.title}
@@ -70,6 +24,6 @@ export const Layout: React.FC<LayoutProps> = props => {
         <Header />
         {props.children}
       </>
-    </ThemeProvider>
+    </ThemeContext>
   );
 };

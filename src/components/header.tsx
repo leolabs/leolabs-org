@@ -1,4 +1,5 @@
-import styled from '../util/styled-components';
+import { styled } from 'linaria/react';
+import { dimensions } from '../util/theme';
 import React from 'react';
 import { Link } from 'gatsby';
 
@@ -12,7 +13,7 @@ const StyledHeader = styled.header`
 
 const Container = styled.div`
   margin: auto;
-  max-width: ${p => p.theme.dimensions.maxWidth};
+  max-width: ${dimensions.maxWidth};
   display: flex;
   align-items: center;
   padding: 2rem 3rem;
@@ -25,7 +26,7 @@ const Container = styled.div`
 const Title = styled(Link)`
   text-decoration: none;
   color: inherit;
-  font-size: ${p => p.theme.fontSizes.h4};
+  font-size: ${dimensions.fontSizes.h4};
 `;
 
 const Menu = styled.nav`
