@@ -161,7 +161,7 @@ export const Intro: React.FC = () => {
         <SocialItem target="_blank" href="https://open.spotify.com/user/leolabs">
           <img src={SpotifyIcon} alt="Spotify" />
         </SocialItem>
-        <SocialItem target="_blank" href="https://trakt.tv/leolabs">
+        <SocialItem target="_blank" href="https://trakt.tv/users/leolabs">
           <img src={TraktTvIcon} alt="TraktTv" />
         </SocialItem>
       </Social>
