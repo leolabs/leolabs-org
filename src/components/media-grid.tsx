@@ -1,19 +1,15 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { styled } from 'linaria/react';
 import { dimensions } from '../util/theme';
 
 export const MediaGrid = styled.div`
-  display: flex;
-  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 2rem;
-  margin: -2rem;
 
-  &:after {
-    content: '';
-    flex: 0 0 1rem;
-  }
+  overflow: visible;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 `;
 
 export const Medium = styled.a`
@@ -25,16 +21,12 @@ export const Medium = styled.a`
   transform: translateZ(0);
 
   min-width: 150px;
-  margin-right: 1rem;
   flex-grow: 1;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   transition: box-shadow 0.5s;
 
   &:hover {
+    opacity: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
 `;
