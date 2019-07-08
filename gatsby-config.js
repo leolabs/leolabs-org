@@ -69,6 +69,7 @@ module.exports = {
           'gatsby-remark-external-links',
           'gatsby-remark-embed-video',
           'gatsby-remark-prismjs',
+          'gatsby-remark-reading-time',
         ],
       },
     },
