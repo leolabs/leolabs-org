@@ -7,7 +7,7 @@ const Content = styled.article`
   margin: auto;
   padding: 1.5rem;
   padding-top: 10rem;
-  max-width: 40rem;
+  max-width: 42rem;
   font-size: 20px;
 
   > h1 {
