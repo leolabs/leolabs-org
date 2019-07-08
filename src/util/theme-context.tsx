@@ -41,12 +41,12 @@ const themeStyles = css`
     }
 
     a {
-      color: inherit;
+      color: var(--color-brand);
       text-decoration: underline var(--color-brand);
 
       &:hover,
       &:focus {
-        color: var(--color-text);
+        opacity: 0.8;
       }
     }
   }

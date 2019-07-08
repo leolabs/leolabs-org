@@ -67,6 +67,10 @@ const IntroText = styled.div`
     margin-bottom: 1rem;
   }
 
+  a {
+    color: var(--color-text);
+  }
+
   p {
     font-size: 3rem;
     font-weight: 300;
