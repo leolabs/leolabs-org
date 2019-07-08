@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 const StyledHeader = styled.header`
   position: fixed;
   width: 100%;
-  background: color-mod(var(--color-bg), alpha(95%));
+  background: var(--color-header-bg);
   color: var(--color-text);
   backdrop-filter: blur(10px);
   z-index: 10;

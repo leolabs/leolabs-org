@@ -5,6 +5,11 @@ import { css } from 'linaria';
 const themeStyles = css`
   :global() {
     body {
+      --color-text: ${themes.light.text};
+      --color-bg: ${themes.light.bg};
+      --color-header-bg: ${themes.light['header-bg']};
+      --color-brand: ${themes.light.brand};
+
       margin: 0;
       color: var(--color-text);
       background: var(--color-bg);
