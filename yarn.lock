@@ -1435,6 +1435,13 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.10.6.tgz#c42137f0f2f6458bf0c898d65f48c5f600911475"
   integrity sha512-d0BOAicT0tEdbdVQlLGOVul1kvg6YvbaADRCThGCz5NJ0e9r00SofcR1x69hmlCyrHuB6jd4cKzL9bMLjPnpAA==
 
+"@types/open@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@types/open/-/open-6.1.0.tgz#3cdf3db197a6a5d823babe6effeed243fad5d28a"
+  integrity sha512-sdB0OltczakZfdn5DYg3ZbHoQeYtU8Vbo4dys0U98gikn++M4gGDI02dzEWXPMP5uXGSjGx9GnK/yLlJMfGjlg==
+  dependencies:
+    "@types/node" "*"
+
 "@types/prettier@^1.16.4":
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.16.4.tgz#5e5e97702cb68498aaba7349b941648daaf2385c"
@@ -5997,17 +6004,18 @@ gatsby-source-filesystem@^2.0.22, gatsby-source-filesystem@^2.1.2:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-spotify@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-spotify/-/gatsby-source-spotify-1.2.2.tgz#779f9bdf30449884cff65f63a6a00cbc4a782434"
-  integrity sha512-38wZ/Hs5RdUYp1uxLlcUEQWg9hVCr2rOoUOckBXMdzW4Y4a/oaXycmZhVJuWJYsH8RUFxoaAd+qfRxmpPZEEng==
+gatsby-source-spotify@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-spotify/-/gatsby-source-spotify-1.2.3.tgz#5e30b8c202695e382accff4a9150070f4bafcaf9"
+  integrity sha512-UQiQvGhOydEd5yUM//rCOqXJoVbqF6aEk76UX0AVOYAaLhC1UwLvfMHJlF8YKT2CpqhN8K+bBhGZ/QbMJFAeIg==
   dependencies:
-    commander "^2.19.0"
+    "@types/open" "^6.1.0"
+    commander "^2.20.0"
     gatsby-node-helpers "^0.3.0"
-    gatsby-source-filesystem "^2.0.22"
-    inquirer "^6.2.2"
-    node-fetch "^2.3.0"
-    opn "^5.4.0"
+    gatsby-source-filesystem "^2.1.2"
+    inquirer "^6.4.1"
+    node-fetch "^2.6.0"
+    open "^6.4.0"
 
 gatsby-source-trakt-tmdb@^1.1.1:
   version "1.1.1"
@@ -7386,7 +7394,7 @@ inquirer@3.3.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-inquirer@^6.2.0, inquirer@^6.2.2:
+inquirer@^6.2.0, inquirer@^6.2.2, inquirer@^6.4.1:
   version "6.4.1"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-6.4.1.tgz#7bd9e5ab0567cd23b41b0180b68e0cfa82fc3c0b"
   integrity sha512-/Jw+qPZx4EDYsaT6uz7F4GJRNFMRdKNeUZw3ZnKV8lyuUgz/YWRCSUAJMZSVhSq4Ec0R2oYnyi6b3d4JXcL5Nw==
@@ -9891,6 +9899,13 @@ onetime@^2.0.0:
   integrity sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=
   dependencies:
     mimic-fn "^1.0.0"
+
+open@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-6.4.0.tgz#5c13e96d0dc894686164f18965ecfe889ecfc8a9"
+  integrity sha512-IFenVPgF70fSm1keSd2iDBIDIBZkroLeuffXq+wKTzTJlBpesFWojV9lb8mzOfaAzM1sr7HQHuO0vtV0zYekGg==
+  dependencies:
+    is-wsl "^1.1.0"
 
 opentracing@^0.14.3:
   version "0.14.3"
