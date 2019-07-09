@@ -15,6 +15,12 @@ const themeStyles = css`
       background: var(--color-bg);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
         Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      font-size: 18px;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 1px solid var(--color-border);
     }
 
     h1 {

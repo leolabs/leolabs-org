@@ -87,6 +87,29 @@ const IntroText = styled.div`
   }
 `;
 
+const SmallIntroText = styled.div`
+  h2 {
+    color: var(--color-brand);
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      margin-right: 0.8rem;
+    }
+  }
+`;
+
 const Social = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -96,6 +119,8 @@ const SocialItem = styled.a`
   opacity: 0.7;
   transition: opacity 0.2s;
   margin: 0.5rem;
+
+  filter: var(--color-icon);
 
   &:hover {
     opacity: 1;
@@ -143,31 +168,55 @@ export const Portrait: React.FC = () => {
   );
 };
 
+const IntroContent = () => (
+  <>
+    <h2>Hey there! My name is Leo Bernard.</h2>
+    <p>
+      I'm a Stu­dent, Mu­si­cian and Developer at{' '}
+      <a href="https://crisp.studio">Crisp Studio</a>.<br />I love Mu­sic, Movies,
+      Com­put­ers, and Cats.
+    </p>
+  </>
+);
+
+const socials = [
+  { icon: TwitterIcon, title: 'Twitter', href: 'https://twitter.com/leolabs_org' },
+  { icon: GitHubIcon, title: 'GitHub', href: 'https://github.com/leolabs' },
+  {
+    icon: SpotifyIcon,
+    title: 'Spotify',
+    href: 'https://open.spotify.com/user/leolabs',
+  },
+  { icon: TraktTvIcon, title: 'Trakt', href: 'https://trakt.tv/users/leolabs' },
+];
+
+export const SmallIntro = () => (
+  <SmallIntroText>
+    <IntroContent />
+    <p className="social">
+      {socials.map(s => (
+        <a href={s.href} key={s.href} target="_blank">
+          {s.title}
+        </a>
+      ))}
+    </p>
+  </SmallIntroText>
+);
+
 export const Intro: React.FC = () => {
   return (
     <IntroBox>
       <Portrait />
       <IntroText>
-        <h2>Hey there! My name is Leo Bernard.</h2>
-        <p>
-          I'm a Stu­dent, Mu­si­cian and Developer at{' '}
-          <a href="https://crisp.studio">Crisp Studio</a>.<br />I love Mu­sic,
-          Movies, Com­put­ers, and Cats.
-        </p>
+        <IntroContent />
       </IntroText>
+
       <Social>
-        <SocialItem target="_blank" href="https://twitter.com/leolabs_org">
-          <img src={TwitterIcon} alt="Twitter" />
-        </SocialItem>
-        <SocialItem target="_blank" href="https://github.com/leolabs">
-          <img src={GitHubIcon} alt="GitHub" />
-        </SocialItem>
-        <SocialItem target="_blank" href="https://open.spotify.com/user/leolabs">
-          <img src={SpotifyIcon} alt="Spotify" />
-        </SocialItem>
-        <SocialItem target="_blank" href="https://trakt.tv/users/leolabs">
-          <img src={TraktTvIcon} alt="TraktTv" />
-        </SocialItem>
+        {socials.map(s => (
+          <SocialItem target="_blank" href={s.href}>
+            <img src={s.icon} alt={s.title} key={s.href} />
+          </SocialItem>
+        ))}
       </Social>
     </IntroBox>
   );

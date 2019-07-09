@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { Layout } from '../components/layout';
 import { styled } from 'linaria/react';
 import { dimensions } from '../util/theme';
+import { SmallIntro } from '../components/intro';
 
 require('prismjs/themes/prism-okaidia.css');
 
@@ -47,6 +48,24 @@ export const Content = styled.article`
       border-radius: ${dimensions.borderRadius.normal};
       overflow: hidden;
       margin: 1em 0;
+    }
+
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     > p > img {
@@ -110,11 +129,6 @@ export const Content = styled.article`
       background: hsl(223, 7%, 13%);
     }
 
-    hr {
-      border: none;
-      border-bottom: 1px solid var(--color-border);
-    }
-
     table {
       width: 100%;
       margin: 1em 0;
@@ -160,11 +174,23 @@ export const Content = styled.article`
   }
 `;
 
+const Footer = styled.footer`
+  max-width: 42rem;
+  padding: 3rem 1.5rem;
+  margin: auto;
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border);
+`;
+
 export default ({ data }) => {
   console.log(data);
   const post = data.markdownRemark;
   return (
-    <Layout page="blog" title={post.frontmatter.title}>
+    <Layout
+      page="blog"
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+    >
       <Content>
         <div className="meta">
           <h1>{post.frontmatter.title}</h1>
@@ -177,6 +203,9 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         ></div>
       </Content>
+      <Footer>
+        <SmallIntro />
+      </Footer>
     </Layout>
   );
 };
@@ -185,6 +214,7 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         date(formatString: "MMMM D, YYYY")
         description

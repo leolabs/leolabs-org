@@ -11,6 +11,7 @@ export const themes = {
     'header-bg': 'rgba(255, 255, 255, 0.9)',
     text: '#17252A',
     brand: '#964A61', //'#006bb7',
+    icon: 'none',
   },
   dark: {
     bg: 'rgb(44, 46, 51)',
@@ -18,6 +19,7 @@ export const themes = {
     'header-bg': 'rgba(44, 46, 51, 0.9)',
     text: '#efefef',
     brand: '#964A61', //'#006bb7',
+    icon: 'invert(100%)',
   },
 };
 
