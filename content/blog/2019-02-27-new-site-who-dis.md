@@ -146,11 +146,7 @@ see [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 - 19^th^
 - H~2~O
 
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
 ++Inserted text++
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
 
 ==Marked text==
 
@@ -159,8 +155,6 @@ see [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 Footnote 1 link[^first].
 
 Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
 
 Duplicated footnote reference[^second].
 
