@@ -93,7 +93,7 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
-      options: {},
+      options: { modulePath: `${__dirname}/src/cms/cms.ts` },
     },
     `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality

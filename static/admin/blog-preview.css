@@ -1,0 +1,299 @@
+body {
+  --color-text: #17252a;
+  --color-bg: #fff;
+  --color-header-bg: rgba(255, 255, 255, 0.9);
+  --color-brand: #964a61;
+
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h5 {
+  color: var(--color-text);
+}
+
+p {
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-brand);
+  text-decoration: underline var(--color-brand);
+}
+
+article {
+  margin: auto;
+  padding: 0 1.5rem;
+  padding-top: 10rem;
+  max-width: 42rem;
+  font-size: 20px;
+  --color-border: #eee;
+}
+
+article > .meta p {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 6rem;
+}
+
+article > .meta h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+article > .content h2 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+article > .content h2::after {
+  content: '';
+  display: block;
+  height: 0px;
+  width: 80px;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #bbb;
+}
+
+article > .content .gatsby-resp-image-wrapper {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1em 0;
+}
+
+article > .content img {
+  display: block;
+  max-width: 100%;
+  margin: 1em auto;
+  border-radius: 0.5rem;
+}
+
+article > .content blockquote {
+  margin: 1.5em;
+  margin-left: 0;
+  padding-left: 1.5em;
+  opacity: 0.8;
+  border-left: solid 4px currentColor;
+}
+
+article > .content li ul,
+article > .content li ol {
+  margin: 0;
+}
+article > .content ul,
+article > .content ol {
+  margin: 0 3em 1.5em 1.5em;
+  padding-left: 1.5em;
+}
+article > .content ul {
+  list-style-type: disc;
+}
+article > .content ol {
+  list-style-type: decimal;
+}
+article > .content ol p,
+article > .content ul p {
+  margin-bottom: 0px;
+}
+article > .content li {
+  margin-bottom: 0.75em;
+  margin-top: 0.75em;
+}
+
+article > .content strong,
+article > .content dfn {
+  font-weight: bold;
+}
+
+article > .content em,
+article > .content dfn {
+  font-style: italic;
+}
+
+article > .content del {
+  color: #666;
+}
+
+article > .content pre {
+  margin: 1em 0;
+  font-size: 90%;
+  white-space: pre;
+  border-radius: 0.5rem;
+  background: hsl(223, 7%, 13%);
+}
+
+article > .content hr {
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+article > .content table {
+  width: 100%;
+  margin: 1em 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  border-spacing: 0;
+  empty-cells: show;
+}
+
+article > .content table thead {
+  background: var(--color-border);
+  vertical-align: bottom;
+}
+
+article > .content table th {
+  font-weight: 600;
+  text-align: center;
+}
+
+article > .content table td {
+  text-align: left;
+  vertical-align: top;
+}
+
+article > .content table td,
+article > .content table th {
+  padding: 1rem;
+}
+
+article > .content table .footnotes {
+  font-size: 90%;
+}
+article > .content table .footnotes ol {
+  margin: 0;
+}
+
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code,
+pre {
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+  color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #e6db74;
+}
+
+.token.keyword {
+  color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+  color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

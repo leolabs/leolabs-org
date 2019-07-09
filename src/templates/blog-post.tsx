@@ -6,7 +6,7 @@ import { dimensions } from '../util/theme';
 
 require('prismjs/themes/prism-okaidia.css');
 
-const Content = styled.article`
+export const Content = styled.article`
   margin: auto;
   padding: 0 1.5rem;
   padding-top: 10rem;
