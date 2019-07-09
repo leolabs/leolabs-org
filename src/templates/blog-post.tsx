@@ -2,23 +2,28 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/layout';
 import { styled } from 'linaria/react';
+import { dimensions } from '../util/theme';
+
+require('prismjs/themes/prism-okaidia.css');
 
 const Content = styled.article`
   margin: auto;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   padding-top: 10rem;
   max-width: 42rem;
   font-size: 20px;
 
-  > h1 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
   > .meta {
-    text-align: center;
-    opacity: 0.8;
-    margin-bottom: 6rem;
+    p {
+      text-align: center;
+      opacity: 0.8;
+      margin-bottom: 6rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
   }
 
   > .content {
@@ -38,9 +43,17 @@ const Content = styled.article`
       border-bottom: 2px solid #bbb;
     }
 
-    img {
+    .gatsby-resp-image-wrapper {
+      border-radius: ${dimensions.borderRadius.normal};
+      overflow: hidden;
+      margin: 1em 0;
+    }
+
+    > p > img {
       display: block;
       max-width: 100%;
+      margin: 1em auto;
+      border-radius: ${dimensions.borderRadius.normal};
     }
 
     blockquote {
@@ -90,22 +103,79 @@ const Content = styled.article`
     }
 
     pre {
-      margin: 1.5em 0;
+      margin: 1em 0;
+      font-size: 90%;
       white-space: pre;
+      border-radius: ${dimensions.borderRadius.normal};
+      background: hsl(223, 7%, 13%);
+    }
+
+    hr {
+      border: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    table {
+      width: 100%;
+      margin: 1em 0;
+      border-radius: ${dimensions.borderRadius.normal};
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      border-spacing: 0;
+      empty-cells: show;
+
+      thead {
+        background: var(--color-border);
+        vertical-align: bottom;
+
+        th {
+        }
+      }
+
+      th {
+        font-weight: 600;
+        text-align: center;
+      }
+
+      td {
+        text-align: left;
+        vertical-align: top;
+      }
+
+      td,
+      th {
+        padding: 1rem;
+      }
+    }
+
+    .footnotes {
+      font-size: 90%;
+      ol {
+        margin: 0;
+      }
+
+      .footnote-backref {
+      }
     }
   }
 `;
 
 export default ({ data }) => {
+  console.log(data);
   const post = data.markdownRemark;
   return (
     <Layout page="blog" title={post.frontmatter.title}>
       <Content>
-        <h1>{post.frontmatter.title}</h1>
-        <p className="meta">
-          {post.frontmatter.date} | {post.fields.readingTime.text}
-        </p>
-        <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="meta">
+          <h1>{post.frontmatter.title}</h1>
+          <p>
+            {post.frontmatter.date} | {post.fields.readingTime.text}
+          </p>
+        </div>
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></div>
       </Content>
     </Layout>
   );

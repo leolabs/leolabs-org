@@ -57,7 +57,8 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 2048,
+              maxWidth: 700,
+              quality: 80,
             },
           },
           {
@@ -67,7 +68,6 @@ module.exports = {
             },
           },
           'gatsby-remark-external-links',
-          'gatsby-remark-embed-video',
           'gatsby-remark-prismjs',
           'gatsby-remark-reading-time',
         ],
