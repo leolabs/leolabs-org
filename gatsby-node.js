@@ -11,7 +11,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
   return graphql(`
     {
       allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
@@ -19,6 +19,9 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             fields {
               slug
+            }
+            frontmatter {
+              alias
             }
           }
         }
@@ -33,6 +36,16 @@ exports.createPages = ({ graphql, actions }) => {
           slug: node.fields.slug,
         },
       });
+
+      if (node.frontmatter.alias && node.frontmatter.alias.length) {
+        for (const alias of node.frontmatter.alias) {
+          createRedirect({
+            fromPath: alias,
+            toPath: `blog/${node.fields.slug}`,
+            isPermanent: true,
+          });
+        }
+      }
     });
   });
 };
