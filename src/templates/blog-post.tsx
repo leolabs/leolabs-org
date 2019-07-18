@@ -183,7 +183,6 @@ const Footer = styled.footer`
 `;
 
 export default ({ data }) => {
-  console.log(data);
   const post = data.markdownRemark;
   return (
     <Layout

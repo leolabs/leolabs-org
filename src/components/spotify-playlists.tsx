@@ -33,9 +33,6 @@ export const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ featured }) 
     }
   `);
 
-  console.log(featured);
-  console.log(playlists);
-
   return (
     <MediaGrid>
       {playlists.allSpotifyPlaylist.edges

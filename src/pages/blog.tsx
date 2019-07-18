@@ -64,7 +64,6 @@ const Post = ({ node }) => (
 );
 
 export default ({ data }) => {
-  console.log(data);
   const posts = data.allMarkdownRemark.edges;
   const currentYear = posts[0].node.frontmatter.year;
 
