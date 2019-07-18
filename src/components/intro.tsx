@@ -154,6 +154,7 @@ export const Portrait: React.FC = () => {
         <Video
           autoPlay
           muted
+          playsInline
           loop
           controls={false}
           loaded={videoLoaded}
