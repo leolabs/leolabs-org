@@ -79,7 +79,7 @@ module.exports = {
         tmdbApiKey: process.env.TMDB_API_KEY,
         traktApiKey: process.env.TRAKT_API_KEY,
         username: process.env.TRAKT_USER,
-        limit: 6,
+        limit: 8,
       },
     },
     {

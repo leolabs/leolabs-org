@@ -44,20 +44,24 @@ export const TraktMovies: React.FC<TraktMoviesProps> = ({ limit }) => {
 
   return (
     <MediaGrid>
-      {movies.allTraktWatchedMovie.edges.slice(0, limit || 6).map(e => (
-        <Medium
-          title={`${e.node.tmdb_metadata.title} (watched ${e.node.last_watched_at})`}
-          target="_blank"
-          href={generateLink(e.node.movie.ids.slug)}
-          key={e.node.movie.ids.slug}
-        >
-          <GatsbyImage
-            fluid={e.node.tmdb_metadata.poster.localFile.childImageSharp.fluid}
-            alt={`Movie poster for ${e.node.tmdb_metadata.title}`}
-          />
-          <MediumTitle>{e.node.last_watched_at}</MediumTitle>
-        </Medium>
-      ))}
+      {movies.allTraktWatchedMovie.edges
+        .filter(e => e.node.tmdb_metadata)
+        .slice(0, limit || 6)
+        .map(e => (console.log(e.node.tmdb_metadata), e))
+        .map(e => (
+          <Medium
+            title={`${e.node.tmdb_metadata.title} (watched ${e.node.last_watched_at})`}
+            target="_blank"
+            href={generateLink(e.node.movie.ids.slug)}
+            key={e.node.movie.ids.slug}
+          >
+            <GatsbyImage
+              fluid={e.node.tmdb_metadata.poster.localFile.childImageSharp.fluid}
+              alt={`Movie poster for ${e.node.tmdb_metadata.title}`}
+            />
+            <MediumTitle>{e.node.last_watched_at}</MediumTitle>
+          </Medium>
+        ))}
     </MediaGrid>
   );
 };

@@ -6041,10 +6041,10 @@ gatsby-source-spotify@^1.2.3:
     node-fetch "^2.6.0"
     open "^6.4.0"
 
-gatsby-source-trakt-tmdb@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-trakt-tmdb/-/gatsby-source-trakt-tmdb-1.1.1.tgz#2fef839137c8681a7511701630fe831c5fd1ab25"
-  integrity sha512-ZgTi5u8iIhpqDQwHNX4j2DO0EPybQW1ccbZFhAO+/wKq2/SU5gOQb+XOIVgxIKdTffXxPtlZaSEUuNc286XJiw==
+gatsby-source-trakt-tmdb@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-trakt-tmdb/-/gatsby-source-trakt-tmdb-1.2.0.tgz#e5ba173115f0bda474de622c10c4495ba64ec3ee"
+  integrity sha512-Q+MFaE2WSuMVOhOY3I8+c70cC2PBSPAUSdY2FClis1KQfxswq+DFqXXTTPTCMjO/qFOpPlcjmls6vui5kSMA2A==
   dependencies:
     gatsby-node-helpers "^0.3.0"
     gatsby-source-filesystem "^2.0.22"
