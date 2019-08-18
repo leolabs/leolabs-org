@@ -196,7 +196,7 @@ export default ({ data }) => {
         <div className="meta">
           <h1>{post.frontmatter.title}</h1>
           <p>
-            {post.frontmatter.date} | {post.fields.readingTime.text}
+            {post.frontmatter.date} | {post.timeToRead} min read
           </p>
         </div>
         <div
@@ -216,6 +216,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
+      timeToRead
       frontmatter {
         date(formatString: "MMMM D, YYYY")
         description
@@ -226,11 +227,6 @@ export const query = graphql`
               src
             }
           }
-        }
-      }
-      fields {
-        readingTime {
-          text
         }
       }
     }
