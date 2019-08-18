@@ -11,9 +11,11 @@ import { TraktShows } from '../components/trakt-shows';
 
 import featuredPlaylists from '../../data/featured-playlists.json';
 import { dimensions } from '../util/theme';
+import { Scroller } from '../components/scroller';
 
 const IntroContainer = styled.main`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -43,6 +45,7 @@ const IndexPage = () => {
     <Layout title="Hi, I'm Leo." page="index">
       <IntroContainer>
         <Intro />
+        <Scroller>Learn More</Scroller>
       </IntroContainer>
 
       <SplitSection>
