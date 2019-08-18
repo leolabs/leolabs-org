@@ -5,8 +5,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `content/blog` });
-    createNodeField({ node, name: `slug`, value: slug.slice(12) });
+    const slug = createFilePath({ node, getNode })
+      .split('/')
+      .filter(Boolean)
+      .pop()
+      .slice(11);
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    });
   }
 };
 
