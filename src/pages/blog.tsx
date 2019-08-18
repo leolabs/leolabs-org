@@ -57,7 +57,7 @@ const Post = ({ node }) => (
     </h2>
 
     <p className="meta">
-      {node.frontmatter.date} | {node.fields.readingTime.text}
+      {node.frontmatter.date} | {node.timeToRead} min read
     </p>
     <p>{node.excerpt}</p>
   </Article>
@@ -108,6 +108,7 @@ export const query = graphql`
         node {
           html
           excerpt
+          timeToRead
           frontmatter {
             date(formatString: "MMMM D, YYYY")
             year: date(formatString: "YYYY")
@@ -116,9 +117,6 @@ export const query = graphql`
           }
           fields {
             slug
-            readingTime {
-              text
-            }
           }
         }
       }
