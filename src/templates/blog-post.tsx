@@ -185,6 +185,12 @@ export default ({ data }) => {
       page="blog"
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
+      image={
+        post.frontmatter.image
+          ? process.env.GATSBY_SITE_URL +
+            post.frontmatter.image.childImageSharp.fixed.src
+          : undefined
+      }
     >
       <Content>
         <div className="meta">
@@ -214,6 +220,13 @@ export const query = graphql`
         date(formatString: "MMMM D, YYYY")
         description
         title
+        image {
+          childImageSharp {
+            fixed(width: 1200, quality: 90) {
+              src
+            }
+          }
+        }
       }
       fields {
         readingTime {

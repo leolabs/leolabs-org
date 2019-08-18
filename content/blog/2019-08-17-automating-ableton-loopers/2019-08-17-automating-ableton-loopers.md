@@ -1,6 +1,7 @@
 ---
 title: 'How We Automate Loopers in Ableton Live'
 date: 2019-08-17
+image: 'automating-ableton-loopers.jpg'
 ---
 
 In our live set, we rely heavily on Loopers to build our sound stage. Even though we

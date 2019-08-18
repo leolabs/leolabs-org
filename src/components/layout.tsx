@@ -8,6 +8,7 @@ interface LayoutProps {
   page: string;
   useRawTitle?: boolean;
   description?: string;
+  image?: string;
 }
 
 export const Layout: React.FC<LayoutProps> = props => {
@@ -19,7 +20,16 @@ export const Layout: React.FC<LayoutProps> = props => {
             {props.title}
             {!props.useRawTitle ? ' – leolabs.org' : ''}
           </title>
-          <meta name="description" content={props.description} />
+          {props.description && (
+            <meta name="description" content={props.description} />
+          )}
+          <meta
+            name="twitter:card"
+            content={props.image ? 'summary_large_image' : 'summary'}
+          />
+          {props.image && <meta name="og:image" content={props.image} />}
+          <meta name="twitter:site" content="@leolabs_org" />
+          <meta name="twitter:creator" content="@leolabs_org" />
           <html lang="en" />
         </Helmet>
         <Header page={props.page} />
