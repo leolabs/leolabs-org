@@ -141,9 +141,6 @@ export const Content = styled.article`
       thead {
         background: var(--color-border);
         vertical-align: bottom;
-
-        th {
-        }
       }
 
       th {
@@ -152,7 +149,6 @@ export const Content = styled.article`
       }
 
       td {
-        text-align: left;
         vertical-align: top;
       }
 
