@@ -4,7 +4,7 @@ date: 2017-09-21 01:00:00
 description: My father does 3D architecture visualization and needed a new website that would look good on all devices, load quickly and be optimized for images.
 ---
 
-[![Website Screenshot](/assets/2018/screenshot-3dfine.jpg)](https://3dfine.net)
+[![Website Screenshot](assets/2018/screenshot-3dfine.jpg)](https://3dfine.net)
 
 My father does 3D architecture visualization and needed a new website that would look good on all devices, load quickly
 and be optimized for images. I opted for a minimalistic design that puts the focus on his images.

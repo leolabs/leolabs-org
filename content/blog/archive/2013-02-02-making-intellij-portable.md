@@ -36,18 +36,18 @@ idea.log.path=${idea.home}/var/system/log
 
 Next, I downloaded the 32-bit version of [Java's JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html 'Java JDK download') and installed into a new folder inside the application's path that I called "jdk". The application's folder now looked like this:
 
-[![folder_after_jdk](/assets/2013/02/folder_after_jdk.png)](/assets/2013/02/folder_after_jdk.png)
+[![folder_after_jdk](assets/2013/02/folder_after_jdk.png)](assets/2013/02/folder_after_jdk.png)
 
 Then I started idea.exe which is located in the "bin"-folder. After declining that I want to import settings from another version of IntelliJ, I finally got to the home screen.
 
-[![start_screen](/assets/2013/02/start_screen.png)](/assets/2013/02/start_screen.png)
+[![start_screen](assets/2013/02/start_screen.png)](assets/2013/02/start_screen.png)
 
 I created a new project and configured the JDK path to be inside the application's folder where I installed the 32-bit version of the JDK.
 
-[![intelliJ-jdk-chooser](/assets/2013/02/intelliJ-jdk-chooser1.png)](/assets/2013/02/intelliJ-jdk-chooser1.png)
+[![intelliJ-jdk-chooser](assets/2013/02/intelliJ-jdk-chooser1.png)](assets/2013/02/intelliJ-jdk-chooser1.png)
 
 If you look into the application's folder now, you'll see that IntelliJ automagically created a "var"-folder like we configured it in the "idea.properties"-file. Now, everything should be up and running and we're able to copy the application's folder onto a USB drive. As I wanted to be able to start IntelliJ as fast as possible, I created two shortcuts on my USB drive, one that points to "bin/idea.exe" and one that points to "bin/idea64.exe". The application's folder should now look like this:
 
-[![folder_after_install](/assets/2013/02/folder_after_install.png)](/assets/2013/02/folder_after_install.png)
+[![folder_after_install](assets/2013/02/folder_after_install.png)](assets/2013/02/folder_after_install.png)
 
 If you want IntelliJ running at an acceptable speed, you should copy it to a fast USB drive which is at least USB 2.0. If you're too lazy to build IntelliJ Portable yourself, you can download a prepacked version [here](http://cdn.leolabs.org/files/intellij-portable/IntelliJ IDEA Portable.zip "Download IntelliJ IDEA Portable"), although I recommend you to follow this tutorial as you can be sure that you have the newest versions of IntelliJ and the JDK. I hope this little tutorial helped you. Also, this is my first article in English, so please let me know if I made any mistakes in the text. If you've got some questions or suggestions, just put them into the comments.

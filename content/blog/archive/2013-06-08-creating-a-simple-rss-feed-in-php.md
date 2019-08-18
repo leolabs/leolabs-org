@@ -4,7 +4,7 @@ date: 2013-06-08 16:32:00 Z
 slug: creating-a-simple-rss-feed-in-php
 ---
 
-[![rss-banner](/assets/2013/06/rss-banner.jpg)](/assets/2013/06/rss-banner.jpg) In my current project, [#tifnum](http://leolabs.org/blog/tifnum-finding-the-internets-favorite-number/ '#TIFNUM – Finding the internet’s favorite number'), I wanted to add a simple RSS feed, so that interested people can get the newest favorite number every day. After trying out many solutions, I found out that using the SimpleXMLElement  it is one simple way of doing this. Assuming that you have an array containing your articles, e.g. like this:
+[![rss-banner](assets/2013/06/rss-banner.jpg)](assets/2013/06/rss-banner.jpg) In my current project, [#tifnum](http://leolabs.org/blog/tifnum-finding-the-internets-favorite-number/ '#TIFNUM – Finding the internet’s favorite number'), I wanted to add a simple RSS feed, so that interested people can get the newest favorite number every day. After trying out many solutions, I found out that using the SimpleXMLElement  it is one simple way of doing this. Assuming that you have an array containing your articles, e.g. like this:
 
 ```php
 $entries = array(

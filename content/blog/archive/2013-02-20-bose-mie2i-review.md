@@ -6,18 +6,18 @@ alias:
 - blog/technology/idevices/bose-mie2i-review
 ---
 
-[![Bose MIE2i banner](/assets/2013/02/banner-bose1.png)](/assets/2013/02/banner-bose1.png)
+[![Bose MIE2i banner](assets/2013/02/banner-bose1.png)](assets/2013/02/banner-bose1.png)
 
 Last friday my old in ear headphones broke after being used for half a year so I wanted to buy some new headphones that would last longer and stay inside my ears better without falling out everytime I run. After doing some research on the internet I decided to order the Bose MIE2i headphones on Amazon as they got great reviews, had music controls for the iPhone and iPod and were affordable for me at 90€. The package arrived a few days later and included the headphones itself together with StayHear tips in three different sizes and a little soft case for carrying the headphones.
 
 ## The Design
 
-[![The MIE2i headphones with medium-sized StayHear tips](/assets/2013/02/MG_9683-11.jpg)](/assets/2013/02/MG_9683-11.jpg)
+[![The MIE2i headphones with medium-sized StayHear tips](assets/2013/02/MG_9683-11.jpg)](assets/2013/02/MG_9683-11.jpg)
 
 The design of the MIE2i headphones is different to other headphones. I like the black and white striped cables and the way the headphones are shaped. The media controls are placed on the right cable, which confused me a bit at the beginning as I got used to having it on the left cable, and they have nice and large buttons that you won't miss if you try pressing them without looking at the cable.
 
-[![Media controls of the MIE2i headphones](/assets/2013/02/MG_9684-11.jpg)](/assets/2013/02/MG_9684-11.jpg)
-[![Headphone jack of the MIE2i headphones](/assets/2013/02/MG_9685-11.jpg)](/assets/2013/02/MG_9685-11.jpg)
+[![Media controls of the MIE2i headphones](assets/2013/02/MG_9684-11.jpg)](assets/2013/02/MG_9684-11.jpg)
+[![Headphone jack of the MIE2i headphones](assets/2013/02/MG_9685-11.jpg)](assets/2013/02/MG_9685-11.jpg)
 
 The headphone jack is angled a bit so that you can't unplug the headphones by mistake.  Thanks to the StayHear tips, the headphones won't fall out of your ears when you pull on the cable. They sit comfortably inside my ears without being too far inside them which I didn't like with my old headphones. Also, you can hear your environment a bit when the music isn't too loud which I personally like, especially when I'm walking to school. All in all, I really like the design after getting used to it.
 
