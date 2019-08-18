@@ -48,8 +48,8 @@ exports.createPages = ({ graphql, actions }) => {
       if (node.frontmatter.alias && node.frontmatter.alias.length) {
         for (const alias of node.frontmatter.alias) {
           createRedirect({
-            fromPath: alias,
-            toPath: `blog/${node.fields.slug}`,
+            fromPath: `/${alias}`,
+            toPath: `/blog/${node.fields.slug}`,
             isPermanent: true,
           });
         }
