@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-linaria`,
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,15 +20,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/static/assets/`,
+        name: `blog-article`,
+        path: `${__dirname}/content/blog/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog-article`,
-        path: `${__dirname}/content/blog/`,
+        name: `project`,
+        path: `${__dirname}/content/projects/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -41,7 +42,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: themes.light.brand,
         display: `minimal-ui`,
-        icon: `src/images/logo-square.svg`, // This path is relative to the root of the site.
+        icon: `src/images/logo-square.svg`,
       },
     },
     {
@@ -69,7 +70,6 @@ module.exports = {
           },
           'gatsby-remark-external-links',
           'gatsby-remark-prismjs',
-          'gatsby-remark-reading-time',
         ],
       },
     },

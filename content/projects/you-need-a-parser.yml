@@ -1,0 +1,7 @@
+name: You Need A Parser
+url: https://ynap.leolabs.org
+languages: [TS]
+date: 2019-04-16
+description:
+  Convert CSV files from a variety of sources into a format that can easily be
+  imported into You Need A Budget

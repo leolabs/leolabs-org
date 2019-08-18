@@ -1,0 +1,7 @@
+name: JSON Autotranslate
+url: https://github.com/leolabs/json-autotranslate
+languages: [TS]
+date: 2019-05-10
+description:
+  Translate a locale folder containing multiple JSON files into multiple languages
+  using Google Translate, DeepL, or manually

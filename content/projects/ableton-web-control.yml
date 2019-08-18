@@ -1,0 +1,6 @@
+name: Ableton Web Control
+url: https://github.com/leolabs/ableton-web-control
+languages: [TS, Python]
+date: 2019-06-01
+description:
+  Control important parts of Ableton Live using your phone's or tablet's web browser

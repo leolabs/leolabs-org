@@ -2,10 +2,12 @@ import React from 'react';
 import { Layout } from '../components/layout';
 import { styled } from 'linaria/react';
 import { Intro } from '../components/intro';
+import { LatestPosts } from '../components/latest-posts';
+import { Projects } from '../components/projects';
+import { SpotifyPlaylists } from '../components/spotify-playlists';
+import { SpotifyTracks } from '../components/spotify-tracks';
 import { TraktMovies } from '../components/trakt-movies';
 import { TraktShows } from '../components/trakt-shows';
-import { SpotifyTracks } from '../components/spotify-tracks';
-import { SpotifyPlaylists } from '../components/spotify-playlists';
 
 import featuredPlaylists from '../../data/featured-playlists.json';
 import { dimensions } from '../util/theme';
@@ -26,12 +28,33 @@ const Section = styled.section`
   margin-bottom: 4rem;
 `;
 
+const SplitSection = styled.section`
+  display: grid;
+  grid-gap: 4rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 1rem;
+  max-width: ${dimensions.maxWidth};
+  margin: auto;
+  margin-bottom: 4rem;
+`;
+
 const IndexPage = () => {
   return (
     <Layout title="Hi, I'm Leo." page="index">
       <IntroContainer>
         <Intro />
       </IntroContainer>
+
+      <SplitSection>
+        <div>
+          <h3>My Latest Posts</h3>
+          <LatestPosts />
+        </div>
+        <div>
+          <h3>My Projects</h3>
+          <Projects />
+        </div>
+      </SplitSection>
 
       <Section>
         <h3>Featured Playlists</h3>

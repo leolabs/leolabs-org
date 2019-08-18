@@ -1,0 +1,5 @@
+name: Gitmoji for Alfred
+url: https://github.com/leolabs/alfred-gitmoji
+languages: [Python]
+date: 2018-02-17
+description: Search for gitmoji using Alfred and copy them to the clipboard easily
