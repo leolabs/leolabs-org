@@ -53,7 +53,7 @@ const themeStyles = css`
 
     a {
       color: var(--color-brand);
-      text-decoration: underline var(--color-brand);
+      text-decoration: none;
 
       &:hover,
       &:focus {

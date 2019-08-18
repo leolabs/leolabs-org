@@ -30,7 +30,7 @@ const Section = styled.section`
 
 const SplitSection = styled.section`
   display: grid;
-  grid-gap: 4rem 1rem;
+  grid-gap: 4rem 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 1rem;
   max-width: ${dimensions.maxWidth};

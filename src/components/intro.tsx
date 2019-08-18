@@ -69,6 +69,7 @@ const IntroText = styled.div`
 
   a {
     color: var(--color-text);
+    text-decoration: underline var(--color-brand);
   }
 
   p {
