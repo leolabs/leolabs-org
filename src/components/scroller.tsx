@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { css, cx } from 'linaria';
+import { css } from 'linaria';
 
 export const scrollerClass = css`
   padding-top: 70px;
