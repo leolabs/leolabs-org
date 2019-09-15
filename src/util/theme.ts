@@ -18,7 +18,7 @@ export const themes = {
     border: 'rgba(255, 255, 255, 0.1)',
     'header-bg': 'rgba(44, 46, 51, 0.9)',
     text: '#efefef',
-    brand: '#964A61', //'#006bb7',
+    brand: '#00BC75', //'#006bb7',
     icon: 'invert(100%)',
   },
 };
