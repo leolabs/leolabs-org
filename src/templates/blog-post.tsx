@@ -44,6 +44,10 @@ export const Content = styled.article`
       border-bottom: 2px solid #bbb;
     }
 
+    h3 {
+      font-size: 1.5em;
+    }
+
     .gatsby-resp-image-wrapper {
       border-radius: ${dimensions.borderRadius.normal};
       overflow: hidden;
