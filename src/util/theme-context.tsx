@@ -59,6 +59,12 @@ const themeStyles = css`
       margin-top: 0;
     }
 
+    @media (max-width: 700px) {
+      h1 {
+        font-size: ${dimensions.fontSizes.h2};
+      }
+    }
+
     a {
       color: var(--color-brand);
       text-decoration: none;
