@@ -133,6 +133,13 @@ export const Content = styled.article`
       background: hsl(223, 7%, 13%);
     }
 
+    p > code[class*='language-'] {
+      background: hsl(223, 7%, 13%);
+      border-radius: 4px;
+      padding: 0 4px;
+      font-size: 90%;
+    }
+
     table {
       width: 100%;
       margin: 1em 0;
