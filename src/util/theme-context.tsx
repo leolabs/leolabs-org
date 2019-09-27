@@ -10,6 +10,14 @@ const themeStyles = css`
       --color-header-bg: ${themes.light['header-bg']};
       --color-brand: ${themes.light.brand};
 
+      @media (prefers-color-scheme: dark) {
+        --color-text: ${themes.dark.text};
+        --color-bg: ${themes.dark.bg};
+        --color-header-bg: ${themes.dark['header-bg']};
+        --color-brand: ${themes.dark.brand};
+        --color-icon: invert(100%);
+      }
+
       margin: 0;
       color: var(--color-text);
       background: var(--color-bg);
