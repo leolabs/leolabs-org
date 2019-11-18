@@ -60,6 +60,7 @@ firebase init
 It will ask you which components you need. Select `Functions` and `Storage`. You can
 then select an existing Firebase project that you want to deploy your Cloud Functions
 to, create a new one, or "Add Firebase to an existing Google Cloud Platform project".
+Select TypeScript as the preferred language for your functions.
 
 Add the code above to the newly created `functions/src/index.ts` file and run the
 following command to deploy it:
@@ -68,4 +69,4 @@ following command to deploy it:
 firebase deploy --only functions
 ```
 
-Et voilà, the CF is up and running 🚀
+Et voilà, the Cloud Function is up and running 🚀
