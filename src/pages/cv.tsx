@@ -22,7 +22,10 @@ const Wrapper = styled.main`
   padding-top: 10rem;
   max-width: 62rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+
+  p, ul {
+    line-height: 1.5;
+  }
 
   > h2 {
     margin-top: 4rem;
@@ -44,12 +47,23 @@ const Intro = styled.div`
   grid-gap: 1rem;
   align-items: center;
   margin-bottom: 2rem;
+
+  .portrait {
+    width: 192px;
+  }
+
+  @media(max-width: 600px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
 `;
 
 const IntroText = styled.div`
   h1 {
     margin: 0;
     font-weight: normal;
+    margin-bottom: 0rem;
   }
 
   h2 {
@@ -63,7 +77,7 @@ const IntroText = styled.div`
 
 const Contact = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 1rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
@@ -206,7 +220,7 @@ const CV: React.FC = () => {
     <Layout page="cv" title="CV" description={resume.basics.summary}>
       <Wrapper>
         <Intro>
-          <div>
+          <div className="portrait">
             <Portrait />
           </div>
           <IntroText>
