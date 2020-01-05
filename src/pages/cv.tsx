@@ -28,6 +28,11 @@ const Wrapper = styled.main`
     line-height: 1.5;
   }
 
+  .faded {
+    opacity: 0.8;
+    font-style: italic;
+  }
+
   > h2 {
     margin-top: 4rem;
   }
@@ -140,11 +145,6 @@ const ExperienceList = styled.ul`
   p {
     margin: 0;
     margin-bottom: 0.5rem;
-
-    &.faded {
-      opacity: 0.8;
-      font-style: italic;
-    }
   }
 
   h5 {
@@ -182,7 +182,6 @@ const LanguageGrid = styled.ul`
 
   h4 {
     margin: 0;
-    margin-bottom: 0.5rem;
   }
 
   p {
@@ -345,7 +344,7 @@ const CV: React.FC = () => {
                 {e.studyType}: {e.institution}
               </h4>
               <h5>{e.area}</h5>
-              <p>
+              <p className="faded">
                 {formatDate(e.startDate)} – {formatDate(e.endDate)} {'//'} GPA:{' '}
                 {e.gpa}
               </p>
@@ -358,7 +357,7 @@ const CV: React.FC = () => {
           {resume.languages.map(l => (
             <li>
               <h4>{l.language}</h4>
-              <p>{l.fluency}</p>
+              <p className="faded">{l.fluency}</p>
             </li>
           ))}
         </LanguageGrid>
@@ -372,7 +371,7 @@ const CV: React.FC = () => {
                   {s.title}
                 </a>
               </h4>
-              <p>
+              <p className="faded">
                 {formatDate(s.date)} {'//'} {s.location}
               </p>
             </li>
@@ -388,7 +387,7 @@ const CV: React.FC = () => {
                   {p.name}
                 </a>
               </h4>
-              <p>
+              <p className="faded">
                 {formatDate(p.date)} {'//'} {p.languages.join(', ')}
               </p>
               <p>{p.description}</p>
@@ -405,7 +404,7 @@ const CV: React.FC = () => {
                   {p.name}
                 </a>
               </h4>
-              <p>{formatDate(p.releaseDate)}</p>
+              <p className="faded">{formatDate(p.releaseDate)}</p>
               <p>{p.summary}</p>
             </li>
           ))}
