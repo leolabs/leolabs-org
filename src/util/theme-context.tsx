@@ -4,7 +4,20 @@ import { css } from 'linaria';
 
 const themeStyles = css`
   :global() {
+    html {
+      @media print {
+        font-size: 12px;
+      }
+    }
+
     body {
+      margin: 0;
+      color: var(--color-text);
+      background: var(--color-bg);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
+        Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      font-size: 18px;
+
       --color-text: ${themes.light.text};
       --color-bg: ${themes.light.bg};
       --color-header-bg: ${themes.light['header-bg']};
@@ -36,13 +49,6 @@ const themeStyles = css`
           padding: 0 !important;
         }
       }
-
-      margin: 0;
-      color: var(--color-text);
-      background: var(--color-bg);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
-        Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-      font-size: 18px;
     }
 
     hr {
