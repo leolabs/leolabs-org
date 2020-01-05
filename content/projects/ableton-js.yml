@@ -1,0 +1,5 @@
+name: Ableton.js
+url: https://github.com/leolabs/ableton-js
+languages: [TS, Python]
+date: 2019-06-01
+description: Control your instance or instances of Ableton Live using Node.js

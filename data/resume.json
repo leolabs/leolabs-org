@@ -1,0 +1,186 @@
+{
+  "basics": {
+    "name": "Leo Bernard",
+    "label": "Software Engineer",
+    "picture": "https://secure.gravatar.com/avatar/483ab9eaf44f0c80139a4bd8cd24bc13?size=800",
+    "email": "leo@leolabs.org",
+    "phone": "+49 176 80705009",
+    "website": "https://leolabs.org",
+    "summary": "I am passionate about developing websites and web services that leverage the newest technologies to provide the best possible user experience.",
+    "location": {
+      "address": "Kirberichshofer Weg 27",
+      "postalCode": "52066",
+      "city": "Aachen",
+      "countryCode": "Germany"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "leolabs",
+        "url": "https://linkedin.com/in/leolabs/"
+      },
+      {
+        "network": "GitHub",
+        "username": "leolabs",
+        "url": "https://github.com/leolabs/"
+      },
+      {
+        "network": "Twitter",
+        "username": "@leolabs_org",
+        "url": "https://twitter.com/leolabs_org"
+      }
+    ]
+  },
+  "technicalSkills": [
+    {
+      "title": "Programming Languages",
+      "content": [
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "(S)CSS",
+        "PHP",
+        "SQL",
+        "C#",
+        "Java",
+        "Python",
+        "Go"
+      ]
+    },
+    {
+      "title": "Frameworks / Libraries",
+      "content": [
+        "React.js",
+        "Gatsby",
+        "Polymer",
+        "Vue",
+        "Express",
+        "Electron",
+        "Styled Components",
+        "Linaria"
+      ]
+    },
+    {
+      "title": "Databases",
+      "content": ["MySQL", "PostgreSQL", "MSSQL", "MongoDB", "Firebase"]
+    },
+    {
+      "title": "Infrastructure / Tools",
+      "content": [
+        "Google Cloud",
+        "AWS",
+        "Cloud Functions",
+        "Heroku",
+        "Nginx",
+        "Apache",
+        "Docker",
+        "Git"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Crisp Studio GmbH",
+      "website": "https://crisp.studio",
+      "position": "Lead Product Developer / Co-Founder",
+      "startDate": "2018-11-30",
+      "summary": "Crisp Studio is a Design Sprint agency focused on supporting companies in validating and developing innovative product ideas.",
+      "highlights": [
+        "Co-facilitation of Design Sprints for our customers.",
+        "Creation of realistic prototypes in React and Framer.",
+        "Management and development of websites and custom web apps for our legacy customers.",
+        "Maintenance of SaaS infrastructure (Google Cloud, Firebase, AWS, Netlify)."
+      ]
+    },
+    {
+      "company": "Leo Bernard - Medienproduktion",
+      "website": "https://leolabs.org",
+      "position": "Freelance Web Developer",
+      "startDate": "2013-05-01",
+      "highlights": [
+        "Creation of websites (Wordpress, Hugo, Gatsby) for various clients.",
+        "Development of web apps (React, vanilla JS).",
+        "SEO and Analytics for existing websites."
+      ]
+    },
+    {
+      "company": "Alex Jacobi / Voices Music Audiopost",
+      "website": "https://www.alexjacobi.ai",
+      "position": "Freelance Software Engineer",
+      "startDate": "2016-10-31",
+      "endDate": "2016-12-31",
+      "highlights": ["Co-developed the Wundervoices web app."]
+    },
+    {
+      "company": "Duplexmedia GmbH & Co. KG",
+      "website": "https://duplexmedia.com",
+      "position": "Web Developer",
+      "startDate": "2011-04-30",
+      "endDate": "2018-09-30",
+      "summary": "Duplexmedia is a creative agency offering web development, design, and film production to medium-sized customers.",
+      "highlights": [
+        "Developed websites and web applications for customers and internal usage.",
+        "Introduced the team to new frameworks and tools like CodeIgniter, PhpStorm, YouTrack, and Git, optimizing dev workflows.",
+        "Planned and developed Simfolio, a simple one-page builder, in PHP & MySQL, hosted on Heroku and AWS.",
+        "Managed SaaS infrastructure for internal and external projects (Heroku, AWS, Netlify)."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Fachhochschule Aachen",
+      "area": "Media and Communication for Digital Business",
+      "studyType": "Bachelor’s Degree",
+      "startDate": "2015-09-31",
+      "endDate": "2019-10-31",
+      "gpa": "1.6 (1: best, 5: worst)"
+    }
+  ],
+  "publications": [
+    {
+      "name": "[German] Datenbanken - Big Data",
+      "publisher": "Work for our informatics course in school",
+      "releaseDate": "2014-04-26",
+      "website": "http://leolabs.org/blog/german-datenbanken-big-data/",
+      "summary": "[German] Big Data ist ein seit 2010 in der Informatik sehr häufig verwendeter Begriff, speziell in Verbindung mit dem World Wide Web, welcher als Hype angesehen werden kann. Viele Unternehmen wie Google, Facebook und IBM werben mit “Big Data”, jedoch wird auf den ersten Blick nicht direkt klar, was damit genau gemeint ist, außer dass es sich bei diesem Begriff wohl um große Datenmengen handeln muss, da – wie bei den meisten Hype-Themen – oft nicht mehr objektiv über das Thema berichtet wird."
+    }
+  ],
+  "languages": [
+    {
+      "language": "German",
+      "fluency": "Native Proficiency"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional Proficiency"
+    },
+    {
+      "language": "French",
+      "fluency": "Limited Proficiency"
+    },
+    {
+      "language": "Dutch",
+      "fluency": "Limited Proficiency"
+    }
+  ],
+  "publicSpeaking": [
+    {
+      "title": "React ❤️ TypeScript",
+      "location": "React Meetup Aachen",
+      "date": "2019-03-01",
+      "link": "https://hackmd.io/@leolabs/react-typescript"
+    },
+    {
+      "title": "Redux Saga",
+      "location": "React Meetup Aachen, React Meetup Düsseldorf",
+      "date": "2018-11-01",
+      "link": "https://hackmd.io/@leolabs/redux-saga"
+    },
+    {
+      "title": "SPAs with Web Components, lit-html, and Redux",
+      "location": "Webworker NRW Meetup",
+      "date": "2018-03-01",
+      "link": "https://hackmd.io/@leolabs/spas-with-web-components"
+    }
+  ]
+}
