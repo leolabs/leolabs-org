@@ -12,7 +12,7 @@ export const Content = styled.article`
   padding: 0 1.5rem;
   padding-top: 10rem;
   max-width: 42rem;
-  font-size: 20px;
+  font-size: 1.25rem;
 
   > .meta {
     p {
