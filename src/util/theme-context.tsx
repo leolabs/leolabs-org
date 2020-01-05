@@ -46,6 +46,7 @@ const themeStyles = css`
 
         main,
         article {
+          max-width: none !important;
           padding: 0 !important;
         }
       }
