@@ -33,17 +33,18 @@ const Wrapper = styled.main`
     font-style: italic;
   }
 
-  > h2 {
+  > section {
     margin-top: 4rem;
-  }
+    page-break-inside: avoid;
 
-  > h2:after {
-    content: '';
-    display: block;
-    width: 10rem;
-    height: 0;
-    box-shadow: 0 0 0 1px currentColor;
-    margin-top: 0.5rem;
+    > h2:after {
+      content: '';
+      display: block;
+      width: 10rem;
+      height: 0;
+      box-shadow: 0 0 0 1px currentColor;
+      margin-top: 0.5rem;
+    }
   }
 `;
 
@@ -86,7 +87,7 @@ const Contact = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-border);
   border-radius: 0.5rem;
 
   @media (max-width: 600px) {
@@ -125,6 +126,7 @@ const SkillGrid = styled.div`
 
     li {
       background: var(--color-brand);
+      color: white;
       padding: 0.2rem 0.8rem;
       border-radius: 4px;
       margin-right: 0.5rem;
@@ -195,6 +197,7 @@ const HireMe = styled.div`
   text-align: center;
   background: var(--color-border);
   border-radius: 1rem;
+  page-break-inside: avoid;
 
   h3 {
     margin-top: 0;
@@ -297,118 +300,132 @@ const CV: React.FC = () => {
           ))}
         </Contact>
 
-        <h2>Technical Skills</h2>
-        <SkillGrid>
-          {resume.technicalSkills.map(s => (
-            <div>
-              <h4>{s.title}</h4>
-              <ul>
-                {s.content.map(c => (
-                  <li>{c}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </SkillGrid>
+        <section>
+          <h2>Technical Skills</h2>
+          <SkillGrid>
+            {resume.technicalSkills.map(s => (
+              <div>
+                <h4>{s.title}</h4>
+                <ul>
+                  {s.content.map(c => (
+                    <li>{c}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </SkillGrid>
+        </section>
 
-        <h2>Work Experience</h2>
-        <ExperienceList>
-          {resume.work.map(w => (
-            <li>
-              <h4>
-                <a href={w.website} target="_blank">
-                  {w.company}
-                </a>
-              </h4>
-              <h5>
-                {w.position} ({formatDate(w.startDate)} – {formatDate(w.endDate)})
-              </h5>
+        <section>
+          <h2>Work Experience</h2>
+          <ExperienceList>
+            {resume.work.map(w => (
+              <li>
+                <h4>
+                  <a href={w.website} target="_blank">
+                    {w.company}
+                  </a>
+                </h4>
+                <h5>
+                  {w.position} ({formatDate(w.startDate)} – {formatDate(w.endDate)})
+                </h5>
 
-              {w.summary && <p className="faded">{w.summary}</p>}
+                {w.summary && <p className="faded">{w.summary}</p>}
 
-              <h6>Tasks / Highlights:</h6>
-              <ul className="tasks">
-                {w.highlights.map(h => (
-                  <li>{h}</li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ExperienceList>
+                <h6>Tasks / Highlights:</h6>
+                <ul className="tasks">
+                  {w.highlights.map(h => (
+                    <li>{h}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ExperienceList>
+        </section>
 
-        <h2>Education</h2>
-        <ExperienceList>
-          {resume.education.map(e => (
-            <li>
-              <h4>
-                {e.studyType}: {e.institution}
-              </h4>
-              <h5>{e.area}</h5>
-              <p className="faded">
-                {formatDate(e.startDate)} – {formatDate(e.endDate)} {'//'} GPA:{' '}
-                {e.gpa}
-              </p>
-            </li>
-          ))}
-        </ExperienceList>
+        <section>
+          <h2>Education</h2>
+          <ExperienceList>
+            {resume.education.map(e => (
+              <li>
+                <h4>
+                  {e.studyType}: {e.institution}
+                </h4>
+                <h5>{e.area}</h5>
+                <p className="faded">
+                  {formatDate(e.startDate)} – {formatDate(e.endDate)} {'//'} GPA:{' '}
+                  {e.gpa}
+                </p>
+              </li>
+            ))}
+          </ExperienceList>
+        </section>
 
-        <h2>Languages</h2>
-        <LanguageGrid>
-          {resume.languages.map(l => (
-            <li>
-              <h4>{l.language}</h4>
-              <p className="faded">{l.fluency}</p>
-            </li>
-          ))}
-        </LanguageGrid>
+        <section>
+          <h2>Languages</h2>
+          <LanguageGrid>
+            {resume.languages.map(l => (
+              <li>
+                <h4>{l.language}</h4>
+                <p className="faded">{l.fluency}</p>
+              </li>
+            ))}
+          </LanguageGrid>
+        </section>
 
-        <h2>Public Speaking</h2>
-        <ExperienceList>
-          {resume.publicSpeaking.map(s => (
-            <li>
-              <h4>
-                <a href={s.link} target="_blank">
-                  {s.title}
-                </a>
-              </h4>
-              <p className="faded">
-                {formatDate(s.date)} {'//'} {s.location}
-              </p>
-            </li>
-          ))}
-        </ExperienceList>
+        <section>
+          <h2>Public Speaking</h2>
+          <ExperienceList>
+            {resume.publicSpeaking.map(s => (
+              <li>
+                <h4>
+                  <a href={s.link} target="_blank">
+                    {s.title}
+                  </a>
+                </h4>
+                <p className="faded">
+                  {formatDate(s.date)} {'//'} {s.location}
+                </p>
+              </li>
+            ))}
+          </ExperienceList>
+        </section>
 
-        <h2>Open Source Projects</h2>
-        <ExperienceList>
-          {allProjectsYaml.nodes.map(p => (
-            <li>
-              <h4>
-                <a href={p.url} target="_blank">
-                  {p.name}
-                </a>
-              </h4>
-              <p className="faded">
-                {formatDate(p.date)} {'//'} {p.languages.join(', ')}
-              </p>
-              <p>{p.description}</p>
-            </li>
-          ))}
-        </ExperienceList>
+        <section>
+          <h2>Open Source Projects</h2>
+          <ExperienceList>
+            {allProjectsYaml.nodes.map(p => (
+              <li>
+                <h4>
+                  <a href={p.url} target="_blank">
+                    {p.name}
+                  </a>
+                </h4>
+                <p className="faded">
+                  {formatDate(p.date)} {'//'} {p.languages.join(', ')}
+                </p>
+                <p>{p.description}</p>
+              </li>
+            ))}
+          </ExperienceList>
+        </section>
 
-        <h2>Publications</h2>
-        <ExperienceList>
-          {resume.publications.map(p => (
-            <li>
-              <h4>
-                <a href={p.website} target="_blank">
-                  {p.name}
-                </a>
-              </h4>
-              <p className="faded">{formatDate(p.releaseDate)}</p>
-              <p>{p.summary}</p>
-            </li>
-          ))}
-        </ExperienceList>
+        <section>
+          <h2>Publications</h2>
+          <ExperienceList>
+            {resume.publications.map(p => (
+              <li>
+                <h4>
+                  <a href={p.website} target="_blank">
+                    {p.name}
+                  </a>
+                </h4>
+                <p className="faded">{formatDate(p.releaseDate)}</p>
+                <p>{p.summary}</p>
+              </li>
+            ))}
+          </ExperienceList>
+        </section>
 
         <HireMe>
           <h3>Like What You See?</h3>

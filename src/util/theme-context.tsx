@@ -9,13 +9,32 @@ const themeStyles = css`
       --color-bg: ${themes.light.bg};
       --color-header-bg: ${themes.light['header-bg']};
       --color-brand: ${themes.light.brand};
+      --color-border: rgba(0, 0, 0, 0.1);
 
       @media (prefers-color-scheme: dark) {
         --color-text: ${themes.dark.text};
         --color-bg: ${themes.dark.bg};
         --color-header-bg: ${themes.dark['header-bg']};
         --color-brand: ${themes.dark.brand};
+        --color-border: rgba(255, 255, 255, 0.1);
         --color-icon: invert(100%);
+      }
+
+      @media print {
+        --color-text: ${themes.light.text};
+        --color-bg: ${themes.light.bg};
+        --color-header-bg: ${themes.light['header-bg']};
+        --color-brand: ${themes.light.brand};
+        --color-border: rgba(0, 0, 0, 0.1);
+
+        header {
+          display: none;
+        }
+
+        main,
+        article {
+          padding: 0 !important;
+        }
       }
 
       margin: 0;
@@ -78,36 +97,5 @@ const themeStyles = css`
 `;
 
 export const ThemeContext: React.FC<{ theme?: Mode }> = ({ children, theme }) => {
-  const [mode, setMode] = useState<Mode>('light');
-
-  useEffect(() => {
-    if (theme) {
-      setMode(theme);
-      return;
-    }
-
-    const matcher = window.matchMedia('(prefers-color-scheme: dark)');
-    const isDarkMode = matcher.matches;
-
-    if (isDarkMode) {
-      setMode('dark');
-    }
-
-    const listener = (e: MediaQueryListEvent) => {
-      setMode(e.matches ? 'dark' : 'light');
-    };
-    matcher.addListener(listener);
-
-    return () => {
-      matcher.removeListener(listener);
-    };
-  }, [theme]);
-
-  useEffect(() => {
-    Object.keys(themes[mode]).forEach(key => {
-      document.body.style.setProperty(`--color-${key}`, themes[mode][key]);
-    });
-  }, [mode]);
-
   return <div className={themeStyles}>{children}</div>;
 };
