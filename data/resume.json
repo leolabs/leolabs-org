@@ -138,11 +138,18 @@
   ],
   "publications": [
     {
+      "name": "[German] Component Sprints: Entwicklung eines neuartigen Ansatzes zur Optimierung des Übergangs vom Prototypen zum MVP",
+      "publisher": "Work for our informatics course in school",
+      "releaseDate": "2014-04-26",
+      "website": "http://leolabs.org/publications/component-sprints.pdf",
+      "summary": "Ziel dieser Bachelorarbeit ist es, ein Konzept für einen Sprint zu entwickeln, der den Übergang vom Prototyp aus einem Design Sprint zum fertigen Minimum Viable Product (MVP) optimal überbrückt."
+    },
+    {
       "name": "[German] Datenbanken - Big Data",
       "publisher": "Work for our informatics course in school",
       "releaseDate": "2014-04-26",
-      "website": "http://leolabs.org/blog/german-datenbanken-big-data/",
-      "summary": "[German] Big Data ist ein seit 2010 in der Informatik sehr häufig verwendeter Begriff, speziell in Verbindung mit dem World Wide Web, welcher als Hype angesehen werden kann. Viele Unternehmen wie Google, Facebook und IBM werben mit “Big Data”, jedoch wird auf den ersten Blick nicht direkt klar, was damit genau gemeint ist, außer dass es sich bei diesem Begriff wohl um große Datenmengen handeln muss, da – wie bei den meisten Hype-Themen – oft nicht mehr objektiv über das Thema berichtet wird."
+      "website": "http://leolabs.org/publications/big-data.pdf",
+      "summary": "Big Data ist ein seit 2010 in der Informatik sehr häufig verwendeter Begriff, speziell in Verbindung mit dem World Wide Web, welcher als Hype angesehen werden kann."
     }
   ],
   "languages": [

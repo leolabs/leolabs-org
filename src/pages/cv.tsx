@@ -23,7 +23,8 @@ const Wrapper = styled.main`
   max-width: 62rem;
   font-size: 1.25rem;
 
-  p, ul {
+  p,
+  ul {
     line-height: 1.5;
   }
 
@@ -52,7 +53,7 @@ const Intro = styled.div`
     width: 192px;
   }
 
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
@@ -77,11 +78,15 @@ const IntroText = styled.div`
 
 const Contact = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 `;
 
 const ContactDetail = styled.div`
@@ -185,6 +190,44 @@ const LanguageGrid = styled.ul`
   }
 `;
 
+const HireMe = styled.div`
+  margin-top: 4rem;
+  padding: 5rem;
+  text-align: center;
+  background: var(--color-border);
+  border-radius: 1rem;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  a {
+    color: white;
+    background: var(--color-brand);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: opacity 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding: 2rem 2rem;
+  border-top: 1px solid var(--color-border);
+
+  p {
+    margin: 0;
+    margin-right: 1rem;
+  }
+`;
+
 const socialIcons = {
   LinkedIn: Linkedin,
   GitHub: GitHub,
@@ -278,7 +321,9 @@ const CV: React.FC = () => {
                   {w.company}
                 </a>
               </h4>
-              <h5>{w.position} ({formatDate(w.startDate)} – {formatDate(w.endDate)})</h5>
+              <h5>
+                {w.position} ({formatDate(w.startDate)} – {formatDate(w.endDate)})
+              </h5>
 
               {w.summary && <p className="faded">{w.summary}</p>}
 
@@ -301,7 +346,8 @@ const CV: React.FC = () => {
               </h4>
               <h5>{e.area}</h5>
               <p>
-                {formatDate(e.startDate)} – {formatDate(e.endDate)} // GPA: {e.gpa}
+                {formatDate(e.startDate)} – {formatDate(e.endDate)} {'//'} GPA:{' '}
+                {e.gpa}
               </p>
             </li>
           ))}
@@ -323,11 +369,11 @@ const CV: React.FC = () => {
             <li>
               <h4>
                 <a href={s.link} target="_blank">
-                      {s.title}
+                  {s.title}
                 </a>
               </h4>
               <p>
-                {formatDate(s.date)} // {s.location}
+                {formatDate(s.date)} {'//'} {s.location}
               </p>
             </li>
           ))}
@@ -339,16 +385,47 @@ const CV: React.FC = () => {
             <li>
               <h4>
                 <a href={p.url} target="_blank">
-                      {p.name}
+                  {p.name}
                 </a>
               </h4>
-              <p>{formatDate(p.date)} // {p.languages.join(', ')}</p>
               <p>
-                {p.description}
+                {formatDate(p.date)} {'//'} {p.languages.join(', ')}
               </p>
+              <p>{p.description}</p>
             </li>
           ))}
         </ExperienceList>
+
+        <h2>Publications</h2>
+        <ExperienceList>
+          {resume.publications.map(p => (
+            <li>
+              <h4>
+                <a href={p.website} target="_blank">
+                  {p.name}
+                </a>
+              </h4>
+              <p>{formatDate(p.releaseDate)}</p>
+              <p>{p.summary}</p>
+            </li>
+          ))}
+        </ExperienceList>
+
+        <HireMe>
+          <h3>Like What You See?</h3>
+          <a href="mailto:leo@leolabs.org">Hire Me 🚀</a>
+        </HireMe>
+
+        <Footer>
+          <p>Made by Leo Bernard</p>
+          <a
+            download
+            target="_blank"
+            href="https://raw.githubusercontent.com/leolabs/leolabs-org/master/data/resume.json"
+          >
+            Download this CV as jsonResume
+          </a>
+        </Footer>
       </Wrapper>
     </Layout>
   );
