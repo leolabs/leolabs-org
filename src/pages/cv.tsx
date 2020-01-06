@@ -210,15 +210,42 @@ const HireMe = styled.div`
     margin-top: 0;
   }
 
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(0, 188, 117, 0.4);
+      box-shadow: 0 0 0 0 rgba(0, 188, 117, 0.4);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 10px rgba(0, 188, 117, 0);
+      box-shadow: 0 0 0 10px rgba(0, 188, 117, 0);
+    }
+  }
+
   a {
+    display: inline-block;
+    position: relative;
     color: white;
     background: var(--color-brand);
     padding: 0.8rem 1.2rem;
     border-radius: 0.5rem;
-    transition: opacity 0.2s, box-shadow 0.2s;
+    transition: opacity 0.5s, box-shadow 0.5s;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
+    :after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+    }
+
     &:hover {
+      :after {
+        animation: pulse 1s;
+      }
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     }
   }
@@ -226,9 +253,10 @@ const HireMe = styled.div`
 
 const Footer = styled.footer`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 4rem;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   border-top: 1px solid var(--color-border);
 
   p {
