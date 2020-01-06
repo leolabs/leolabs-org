@@ -35,31 +35,34 @@ const Wrapper = styled.main`
 
   > section {
     margin-top: 4rem;
-    page-break-inside: avoid;
 
-    > h2:after {
-      content: '';
-      display: block;
-      width: 10rem;
-      height: 0;
-      box-shadow: 0 0 0 1px currentColor;
-      margin-top: 0.5rem;
+    > h2 {
+      page-break-after: avoid;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 10rem;
+        height: 0;
+        box-shadow: 0 0 0 1px currentColor;
+        margin-top: 0.5rem;
+      }
     }
   }
 `;
 
 const Intro = styled.div`
   display: grid;
-  grid-template-columns: 192px 1fr;
+  grid-template-columns: 10em 1fr;
   grid-gap: 1rem;
   align-items: center;
   margin-bottom: 2rem;
 
   .portrait {
-    width: 192px;
+    width: 10em;
   }
 
-  @media (max-width: 600px) {
+  @media only screen and (max-width: 35rem) {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
@@ -90,7 +93,7 @@ const Contact = styled.div`
   background: var(--color-border);
   border-radius: 0.5rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 35rem) {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 `;
@@ -111,11 +114,12 @@ const ContactDetail = styled.div`
 const SkillGrid = styled.div`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 
   h4 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   ul {
@@ -142,6 +146,8 @@ const ExperienceList = styled.ul`
   h4,
   h5 {
     margin: 0;
+    line-height: 1;
+    margin-bottom: 0.5rem;
   }
 
   p {
@@ -161,6 +167,7 @@ const ExperienceList = styled.ul`
 
   > li {
     margin-bottom: 2rem;
+    page-break-inside: avoid;
   }
 
   .tasks {
@@ -168,7 +175,7 @@ const ExperienceList = styled.ul`
 
     li:before {
       content: '-';
-      text-indent: -1em;
+      text-indent: -1.25em;
       display: inline-block;
     }
   }
