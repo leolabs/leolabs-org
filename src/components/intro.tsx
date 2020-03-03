@@ -174,7 +174,7 @@ const IntroContent = () => (
   <>
     <h2>Hey there! My name is Leo Bernard.</h2>
     <p>
-      I'm a Stu­dent, Mu­si­cian and Developer at{' '}
+      I'm a Mu­si­cian and Developer at{' '}
       <a href="https://crisp.studio">Crisp Studio</a>.<br />I love Mu­sic, Movies,
       Com­put­ers, and Cats.
     </p>
