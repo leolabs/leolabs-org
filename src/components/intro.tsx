@@ -8,6 +8,7 @@ import TwitterIcon from '../images/social-icons/twitter.svg';
 import TraktTvIcon from '../images/social-icons/trakt-tv.svg';
 import SpotifyIcon from '../images/social-icons/spotify.svg';
 import GitHubIcon from '../images/social-icons/github.svg';
+import GumroadIcon from '../images/social-icons/gumroad.svg';
 
 const IntroBox = styled.div`
   width: 100%;
@@ -174,9 +175,8 @@ const IntroContent = () => (
   <>
     <h2>Hey there! My name is Leo Bernard.</h2>
     <p>
-      I'm a Mu­si­cian and Developer at{' '}
-      <a href="https://crisp.studio">Crisp Studio</a>.<br />I love Mu­sic, Movies,
-      Com­put­ers, and Cats.
+      I'm a Mu­si­cian and Developer at <a href="https://yourtempo.co">Tempo</a>.
+      <br />I love Mu­sic, Movies, Com­put­ers, and Cats.
     </p>
   </>
 );
@@ -184,6 +184,7 @@ const IntroContent = () => (
 const socials = [
   { icon: TwitterIcon, title: 'Twitter', href: 'https://twitter.com/leolabs_org' },
   { icon: GitHubIcon, title: 'GitHub', href: 'https://github.com/leolabs' },
+  { icon: GumroadIcon, title: 'Gumroad', href: 'https://store.leolabs.org/' },
   {
     icon: SpotifyIcon,
     title: 'Spotify',
