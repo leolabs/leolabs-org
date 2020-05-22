@@ -1,0 +1,5 @@
+name: YeterGit
+url: https://github.com/leolabs/yestergit
+languages: [TS]
+date: 2020-05-19
+description: List your past commits grouped by date and branch
