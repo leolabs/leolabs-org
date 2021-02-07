@@ -98,19 +98,6 @@ module.exports = {
         fetchPlaylists: true,
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: { modulePath: `${__dirname}/src/cms/cms.ts` },
-    },
     `gatsby-plugin-netlify`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 };

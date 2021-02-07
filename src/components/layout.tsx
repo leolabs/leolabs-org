@@ -30,6 +30,12 @@ export const Layout: React.FC<LayoutProps> = props => {
           {props.image && <meta name="og:image" content={props.image} />}
           <meta name="twitter:site" content="@leolabs_org" />
           <meta name="twitter:creator" content="@leolabs_org" />
+          <script
+            async
+            defer
+            data-domain="leolabs.org"
+            src="https://plausible.io/js/plausible.js"
+          />
           <html lang="en" />
         </Helmet>
         <Header page={props.page} />
