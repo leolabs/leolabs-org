@@ -79,7 +79,8 @@ const themeStyles = css`
       font-size: ${dimensions.fontSizes.h5};
     }
 
-    p {
+    p,
+    li {
       font-size: ${dimensions.fontSizes.p};
       line-height: 1.6;
       margin-top: 0;

@@ -48,6 +48,12 @@ export const Content = styled.article`
       font-size: 1.5em;
     }
 
+    h4 {
+      font-size: 1.2em;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
     .gatsby-resp-image-wrapper {
       border-radius: ${dimensions.borderRadius.normal};
       overflow: hidden;
