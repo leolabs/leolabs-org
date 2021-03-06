@@ -108,7 +108,7 @@ the following commands to install them on your machine:
 ```shell
 brew tap amiaopensource/amiaos
 brew tap mediaarea/homebrew-mediaarea
-brew install ffmpegdecklink dvrescue mediainfo exiftool
+brew install ffmpegdecklink dvrescue mediainfo
 brew link --force ffmpegdecklink
 ```
 
