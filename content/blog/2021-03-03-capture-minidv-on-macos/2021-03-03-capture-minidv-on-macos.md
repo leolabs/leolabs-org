@@ -37,7 +37,7 @@ adapters to achieve:
 
 - [Thunderbolt 3 -> Thunderbolt 2](https://amzn.to/3rpIJSj)
 - [Thunderbolt 2 -> FireWire 800](https://amzn.to/3kPwT1v)
-- [FireWire 800 -> FireWire 400](https://amzn.to/3rpIJSj)
+- [FireWire 800 -> FireWire 400](https://amzn.to/38il0Ml)
 - [FireWire 400 -> Mini FireWire](https://amzn.to/3qoQuXg)
 
 You could also go directly from [FireWire 800 to Mini FireWire](https://amzn.to/2OumLim),
