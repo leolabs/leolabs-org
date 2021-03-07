@@ -1,6 +1,7 @@
 ---
 title: 'Capturing and Archiving MiniDV Tapes on macOS'
 date: 2021-03-06
+image: 'minidv-social.jpg'
 ---
 
 This is a part of a bigger series I'm writing on archiving media in general.
