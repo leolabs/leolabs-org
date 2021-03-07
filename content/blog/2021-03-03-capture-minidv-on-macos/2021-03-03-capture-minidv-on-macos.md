@@ -158,7 +158,7 @@ You can archive this somewhere if you like.
 To split the recordings into smaller clips, we're going to use `dvpackager`:
 
 ```shell
-dvpackage -e mov -s video.dv
+dvpackager -e mov -s video.dv
 ```
 
 - `-e mov` sets the output format, this could also be `mkv`
