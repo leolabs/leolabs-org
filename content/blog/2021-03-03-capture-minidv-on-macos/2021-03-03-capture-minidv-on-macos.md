@@ -191,10 +191,10 @@ do
 
   echo "Converting $f..."
 
-  ffmpeg-dl -i "$f" -vf "yadif=mode=send_field:parity=bff" -vcodec hevc -tag:v hvc1 \
-    -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart \
+  ffmpeg-dl -i "$f" -vf "yadif=mode=send_field:parity=bff" -preset medium \
+    -vcodec hevc -tag:v hvc1 -crf 22 -pix_fmt yuv420p -movflags +faststart \
     -c:a aac -b:a 256k -write_tmcd 0 -metadata creation_time="$DATE" \
-    -hide_banner -loglevel error "$OUTPUT"
+    -hide_banner "$OUTPUT"
 done
 ```
 
@@ -215,8 +215,8 @@ done
 
 This might be practical if you want to further process the video before adding it
 to your library. You could, for example, deinterlace it and upscale it to 1080p with
-Topas Labs' [Video Enhance AI](https://www.topazlabs.com/video-enhance-ai) using the
-*Dione Interlaced* algorithm with *Bottom First* field order.
+Topas Labs' [Video Enhance AI](https://www.topazlabs.com/video-enhance-ai/ref/925/?campaign=minidv)
+using the *Dione Interlaced* algorithm with *Bottom First* field order.
 
 ## Conclusion
 
