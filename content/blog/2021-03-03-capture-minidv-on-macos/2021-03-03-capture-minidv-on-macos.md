@@ -58,7 +58,7 @@ not much active software development going on around it. I tried a few programs:
 
 #### Premiere Pro CC
 
-Premiere straight up doesn't support DV on macOS anymore, so no luck.
+Premiere straight up [doesn't support DV on macOS anymore](https://helpx.adobe.com/x-productkb/multi/video-applications-macos-catalina-compatibility.html#:~:text=no%20longer%20support,over%20FireWire), so no luck.
 
 #### iMovie and Final Cut Pro
 
