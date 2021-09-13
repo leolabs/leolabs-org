@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { css } from 'linaria';
+import styled from 'styled-components';
 
-export const scrollerClass = css`
+export const StyledScroller = styled.div`
   padding-top: 70px;
   position: absolute;
   bottom: 64px;
@@ -52,9 +52,5 @@ export const Scroller = ({ children }) => {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
-  return (
-    <div className={scrollerClass} style={{ opacity }}>
-      {children}
-    </div>
-  );
+  return <StyledScroller style={{ opacity }}>{children}</StyledScroller>;
 };

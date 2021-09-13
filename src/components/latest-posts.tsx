@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 
 const PostList = styled.ul`
   list-style: none;
@@ -42,7 +42,7 @@ export const LatestPosts: React.FC = () => {
   return (
     <>
       <PostList>
-        {allMarkdownRemark.nodes.map(post => (
+        {allMarkdownRemark.nodes.map((post) => (
           <li>
             <h4>
               <Link to={`blog/${post.fields.slug}`}>{post.frontmatter.title}</Link>

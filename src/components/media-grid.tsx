@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { dimensions } from '../util/theme';
 
 export const MediaGrid = styled.div`

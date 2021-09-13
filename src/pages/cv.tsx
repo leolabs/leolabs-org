@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 
 import { Portrait } from '../components/intro';
 import {
@@ -325,7 +325,7 @@ const CV: React.FC = () => {
             <Phone />
             <a href={`tel:${resume.basics.phone}`}>{resume.basics.phone}</a>
           </ContactDetail>
-          {resume.basics.profiles.map(p => (
+          {resume.basics.profiles.map((p) => (
             <ContactDetail title={p.network}>
               <SocialIcon network={p.network} />
               <a href={p.url} target="_blank">
@@ -338,11 +338,11 @@ const CV: React.FC = () => {
         <section>
           <h2>Technical Skills</h2>
           <SkillGrid>
-            {resume.technicalSkills.map(s => (
+            {resume.technicalSkills.map((s) => (
               <div>
                 <h4>{s.title}</h4>
                 <ul>
-                  {s.content.map(c => (
+                  {s.content.map((c) => (
                     <li>{c}</li>
                   ))}
                 </ul>
@@ -354,7 +354,7 @@ const CV: React.FC = () => {
         <section>
           <h2>Work Experience</h2>
           <ExperienceList>
-            {resume.work.map(w => (
+            {resume.work.map((w) => (
               <li>
                 <h4>
                   <a href={w.website} target="_blank">
@@ -369,7 +369,7 @@ const CV: React.FC = () => {
 
                 <h6>Tasks / Highlights:</h6>
                 <ul className="tasks">
-                  {w.highlights.map(h => (
+                  {w.highlights.map((h) => (
                     <li>{h}</li>
                   ))}
                 </ul>
@@ -381,7 +381,7 @@ const CV: React.FC = () => {
         <section>
           <h2>Education</h2>
           <ExperienceList>
-            {resume.education.map(e => (
+            {resume.education.map((e) => (
               <li>
                 <h4>
                   {e.studyType}: {e.institution}
@@ -399,7 +399,7 @@ const CV: React.FC = () => {
         <section>
           <h2>Languages</h2>
           <LanguageGrid>
-            {resume.languages.map(l => (
+            {resume.languages.map((l) => (
               <li>
                 <h4>{l.language}</h4>
                 <p className="faded">{l.fluency}</p>
@@ -411,7 +411,7 @@ const CV: React.FC = () => {
         <section>
           <h2>Public Speaking</h2>
           <ExperienceList>
-            {resume.publicSpeaking.map(s => (
+            {resume.publicSpeaking.map((s) => (
               <li>
                 <h4>
                   <a href={s.link} target="_blank">
@@ -429,7 +429,7 @@ const CV: React.FC = () => {
         <section>
           <h2>Open Source Projects</h2>
           <ExperienceList>
-            {allProjectsYaml.nodes.map(p => (
+            {allProjectsYaml.nodes.map((p) => (
               <li>
                 <h4>
                   <a href={p.url} target="_blank">
@@ -448,7 +448,7 @@ const CV: React.FC = () => {
         <section>
           <h2>Publications</h2>
           <ExperienceList>
-            {resume.publications.map(p => (
+            {resume.publications.map((p) => (
               <li>
                 <h4>
                   <a href={p.website} target="_blank">

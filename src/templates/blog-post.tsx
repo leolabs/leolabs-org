@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/layout';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { dimensions } from '../util/theme';
 import { SmallIntro } from '../components/intro';
 

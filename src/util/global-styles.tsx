@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Mode, themes, dimensions } from './theme';
-import { css } from 'linaria';
+import { createGlobalStyle } from 'styled-components';
+import { themes, dimensions } from './theme';
 
-const themeStyles = css`
-  :global() {
+export const GlobalStyles = createGlobalStyle`
     html {
       @media print {
         font-size: 12px;
@@ -101,9 +99,4 @@ const themeStyles = css`
         opacity: 0.8;
       }
     }
-  }
 `;
-
-export const ThemeContext: React.FC<{ theme?: Mode }> = ({ children, theme }) => {
-  return <div className={themeStyles}>{children}</div>;
-};

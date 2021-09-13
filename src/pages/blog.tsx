@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Layout } from '../components/layout';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { SmallIntro } from '../components/intro';
 
 const Articles = styled.div`
@@ -67,15 +67,15 @@ export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const currentYear = posts[0].node.frontmatter.year;
 
-  const newPosts = posts.filter(p => p.node.frontmatter.year === currentYear);
-  const oldPosts = posts.filter(p => p.node.frontmatter.year !== currentYear);
+  const newPosts = posts.filter((p) => p.node.frontmatter.year === currentYear);
+  const oldPosts = posts.filter((p) => p.node.frontmatter.year !== currentYear);
 
   return (
     <Layout page="blog" title="Blog">
       <Articles>
         <h1>Blog</h1>
         <p>Sometimes I write stuff. You can find it here.</p>
-        {newPosts.map(p => (
+        {newPosts.map((p) => (
           <Post node={p.node} />
         ))}
 
@@ -90,7 +90,7 @@ export default ({ data }) => {
           I'd like to keep them online just in case.
         </p>
 
-        {oldPosts.map(p => (
+        {oldPosts.map((p) => (
           <Post node={p.node} />
         ))}
       </Articles>

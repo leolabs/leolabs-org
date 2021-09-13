@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from '../components/layout';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { Intro } from '../components/intro';
 import { LatestPosts } from '../components/latest-posts';
 import { Projects } from '../components/projects';

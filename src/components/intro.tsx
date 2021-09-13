@@ -1,4 +1,4 @@
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { dimensions } from '../util/theme';
 import React, { useState, ComponentProps } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -56,7 +56,7 @@ const Video = styled.video<{ loaded: boolean } & ComponentProps<'video'>>`
   right: 0;
   width: 100%;
   transition: opacity 0.2s;
-  opacity: ${p => (p.loaded ? 1 : 0)};
+  opacity: ${(p) => (p.loaded ? 1 : 0)};
   z-index: 2;
 `;
 
@@ -197,7 +197,7 @@ export const SmallIntro = () => (
   <SmallIntroText>
     <IntroContent />
     <p className="social">
-      {socials.map(s => (
+      {socials.map((s) => (
         <a href={s.href} key={s.href} target="_blank">
           {s.title}
         </a>
@@ -215,7 +215,7 @@ export const Intro: React.FC = () => {
       </IntroText>
 
       <Social>
-        {socials.map(s => (
+        {socials.map((s) => (
           <SocialItem target="_blank" href={s.href}>
             <img src={s.icon} alt={s.title} key={s.href} />
           </SocialItem>

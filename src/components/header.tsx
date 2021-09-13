@@ -1,4 +1,4 @@
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { dimensions } from '../util/theme';
 import React from 'react';
 import { Link } from 'gatsby';

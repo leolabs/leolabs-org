@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { styled } from 'linaria/react';
+import styled from 'styled-components';
 import { spawn } from 'child_process';
 
 const ProjectList = styled.ul`
@@ -47,7 +47,7 @@ export const Projects: React.FC = () => {
   return (
     <>
       <ProjectList>
-        {projects.map(project => (
+        {projects.map((project) => (
           <li>
             <h4>
               <a href={project.url} target="_blank">
@@ -55,7 +55,7 @@ export const Projects: React.FC = () => {
               </a>
               {project.languages && (
                 <div>
-                  {project.languages.map(l => (
+                  {project.languages.map((l) => (
                     <span>{l}</span>
                   ))}
                 </div>
@@ -67,9 +67,9 @@ export const Projects: React.FC = () => {
       </ProjectList>
       <a
         href="#"
-        onClick={e => {
+        onClick={(e) => {
           e.preventDefault();
-          setShowAll(showAll => !showAll);
+          setShowAll((showAll) => !showAll);
         }}
       >
         {showAll ? 'Show Less' : 'Show More'}

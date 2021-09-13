@@ -4,11 +4,13 @@ require('ts-node').register();
 const { themes } = require('./src/util/theme');
 
 module.exports = {
-  siteMetadata: {},
+  siteMetadata: {
+    siteUrl: 'https://leolabs.org',
+  },
   plugins: [
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-linaria`,
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,7 +49,7 @@ module.exports = {
         short_name: `leolabs.org`,
         start_url: `/`,
         background_color: '#fff',
-        theme_color: themes.light.brand,
+        theme_color: themes.dark.bg,
         display: `minimal-ui`,
         icon: `src/images/logo-square.svg`,
       },
@@ -98,6 +100,7 @@ module.exports = {
         fetchPlaylists: true,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify`,
   ],
 };
