@@ -4,14 +4,12 @@
     "label": "Software Engineer",
     "picture": "https://secure.gravatar.com/avatar/483ab9eaf44f0c80139a4bd8cd24bc13?size=800",
     "email": "leo@leolabs.org",
-    "phone": "+49 176 80705009",
+    "phone": "+31 6 82728713",
     "website": "https://leolabs.org",
-    "summary": "I am passionate about developing websites and web services that leverage the newest technologies to provide the best possible user experience.",
+    "summary": "I am passionate about developing apps, websites and services that leverage the newest technologies to provide the best possible user experience.",
     "location": {
-      "address": "Kirberichshofer Weg 27",
-      "postalCode": "52066",
-      "city": "Aachen",
-      "countryCode": "Germany"
+      "city": "Utrecht",
+      "countryCode": "Netherlands"
     },
     "profiles": [
       {
@@ -41,28 +39,28 @@
         "(S)CSS",
         "PHP",
         "SQL",
-        "Python",
-        "Java",
-        "C#",
-        "Go"
+        "Python"
       ]
     },
     {
       "title": "Frameworks / Libraries",
       "content": [
-        "React.js",
+        "React",
+        "React Native",
+        "Next",
         "Gatsby",
-        "Polymer",
         "Vue",
+        "Polymer",
         "Express",
         "Electron",
         "Styled Components",
+        "Styled JSX",
         "Linaria"
       ]
     },
     {
       "title": "Databases",
-      "content": ["MySQL", "PostgreSQL", "MSSQL", "MongoDB", "Firebase"]
+      "content": ["MySQL", "PostgreSQL", "SQLite", "MSSQL", "MongoDB", "Firebase"]
     },
     {
       "title": "Infrastructure / Tools",
@@ -72,6 +70,7 @@
         "Cloud Functions",
         "Heroku",
         "Netlify",
+        "Vercel",
         "Nginx",
         "Docker",
         "Git"
@@ -80,10 +79,25 @@
   ],
   "work": [
     {
+      "company": "Tempo GmbH",
+      "website": "https://yourtempo.co",
+      "position": "Software Engineer",
+      "startDate": "2020-04-01",
+      "endDate": "2021-11-01",
+      "summary": "Tempo is an app that minimizes distractions and helps building healthy email habits.",
+      "highlights": [
+        "Co-directed the transition to TypeScript",
+        "Lead and implemented Dark Mode, including automatic conversion of emails to dark mode",
+        "Implemented new onboarding, accounts, better search, avatars, deeplinking, and more",
+        "Improved the rendering of emails"
+      ]
+    },
+    {
       "company": "Crisp Studio GmbH",
       "website": "https://crisp.studio",
       "position": "Lead Product Developer / Co-Founder",
       "startDate": "2018-11-30",
+      "endDate": "2020-03-31",
       "summary": "Crisp Studio is a Design Sprint agency focused on supporting companies in validating and developing innovative product ideas.",
       "highlights": [
         "Co-facilitation of Design Sprints for our customers.",
@@ -162,11 +176,11 @@
       "fluency": "Professional Proficiency"
     },
     {
-      "language": "French",
-      "fluency": "Limited Proficiency"
+      "language": "Dutch",
+      "fluency": "Casual Proficiency"
     },
     {
-      "language": "Dutch",
+      "language": "French",
       "fluency": "Limited Proficiency"
     }
   ],
