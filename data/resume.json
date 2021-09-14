@@ -81,14 +81,24 @@
     {
       "company": "Tempo GmbH",
       "website": "https://yourtempo.co",
-      "position": "Software Engineer",
+      "position": "Full-Stack Software Engineer",
       "startDate": "2020-04-01",
       "endDate": "2021-11-01",
       "summary": "Tempo is an app that minimizes distractions and helps building healthy email habits.",
+      "quotes": [
+        {
+          "text": "Taking the role of full-stack developer, Leo has always been a very important asset to our team. I'm constantly impressed with his ability to deliver important key features to our product, from design concept to final implementation, in a more than satisfying period of time. He is a real talent in terms of taking advantage of modern technologies that allowed us to simplify implementations and improve the experience for our end users. As a team player, he has collaborated a lot with other team members, including myself, to write cleaner and more readable code.",
+          "author": "Henrique Ferreira, Co-Founder"
+        },
+        {
+          "text": "The most delightful thing I noticed in Leo was his ability to tackle any problem with serenity and optimism. He carefully considers all requirements, and also has a lot of skills outside his software expertise, which helps him coming up with great solutions. All tasks feel a lot easier when I know I have Leo on my side.",
+          "author": "Nicolas Gaborit, Software Engineer"
+        }
+      ],
       "highlights": [
-        "Co-directed the transition to TypeScript",
+        "Implemented a new onboarding, accounts, better search, avatars, a newsletters tab, deeplinking, and more",
         "Lead and implemented Dark Mode, including automatic conversion of emails to dark mode",
-        "Implemented new onboarding, accounts, better search, avatars, deeplinking, and more",
+        "Co-directed the transition to TypeScript",
         "Improved the rendering of emails"
       ]
     },
@@ -132,6 +142,12 @@
       "startDate": "2011-04-30",
       "endDate": "2018-09-30",
       "summary": "Duplexmedia is a creative agency offering web development, design, and film production to medium-sized customers.",
+      "quotes": [
+        {
+          "text": "Leo was characterized by a high level of work motivation. He always delivered qualitatively and quantitatively good results. His way of working was always reliable, conscientious and very customer-oriented.",
+          "author": "Markus Mazur, CEO"
+        }
+      ],
       "highlights": [
         "Developed websites and web applications for customers and internal usage.",
         "Introduced the team to new frameworks and tools like CodeIgniter, PhpStorm, YouTrack, and Git, optimizing dev workflows.",

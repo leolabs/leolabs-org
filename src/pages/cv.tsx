@@ -34,7 +34,7 @@ const Wrapper = styled.main`
   }
 
   > section {
-    margin-top: 4rem;
+    margin-top: 6rem;
 
     > h2 {
       page-break-after: avoid;
@@ -166,7 +166,7 @@ const ExperienceList = styled.ul`
   }
 
   > li {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     page-break-inside: avoid;
   }
 
@@ -195,6 +195,21 @@ const LanguageGrid = styled.ul`
 
   p {
     margin: 0;
+  }
+`;
+
+const Quote = styled.blockquote`
+  font-size: 1.25rem;
+  font-style: italic;
+
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--color-border);
+
+  span {
+    display: block;
+    opacity: 0.8;
   }
 `;
 
@@ -366,6 +381,13 @@ const CV: React.FC = () => {
                 </h5>
 
                 {w.summary && <p className="faded">{w.summary}</p>}
+
+                {w.quotes?.map((q) => (
+                  <Quote>
+                    {q.text}
+                    <span>— {q.author}</span>
+                  </Quote>
+                ))}
 
                 <h6>Tasks / Highlights:</h6>
                 <ul className="tasks">
