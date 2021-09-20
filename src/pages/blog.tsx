@@ -53,7 +53,7 @@ const Footer = styled.footer`
 const Post = ({ node }) => (
   <Article key={node.fields.slug}>
     <h2>
-      <Link to={`blog/${node.fields.slug}`}>{node.frontmatter.title}</Link>
+      <Link to={`/blog/${node.fields.slug}`}>{node.frontmatter.title}</Link>
     </h2>
 
     <p className="meta">
