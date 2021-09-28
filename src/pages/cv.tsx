@@ -50,7 +50,7 @@ const Wrapper = styled.main`
   }
 
   @media print {
-    zoom: 0.75;
+    zoom: 0.85;
 
     .print-hidden {
       display: none;
