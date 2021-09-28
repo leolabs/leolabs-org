@@ -2,7 +2,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-import { Portrait } from '../components/intro';
 import {
   Linkedin,
   GitHub,
@@ -49,6 +48,14 @@ const Wrapper = styled.main`
       }
     }
   }
+
+  @media print {
+    zoom: 0.75;
+
+    .print-hidden {
+      display: none;
+    }
+  }
 `;
 
 const Intro = styled.div`
@@ -60,6 +67,11 @@ const Intro = styled.div`
 
   .portrait {
     width: 10em;
+
+    img {
+      width: 100%;
+      border-radius: 1000px;
+    }
   }
 
   @media only screen and (max-width: 35rem) {
@@ -166,7 +178,7 @@ const ExperienceList = styled.ul`
   }
 
   > li {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     page-break-inside: avoid;
   }
 
@@ -199,17 +211,20 @@ const LanguageGrid = styled.ul`
 `;
 
 const Quote = styled.blockquote`
+  line-height: 1.5;
   font-size: 1.25rem;
-  font-style: italic;
 
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 2rem;
+
   padding-left: 1rem;
   border-left: 4px solid var(--color-border);
 
   span {
-    display: block;
     opacity: 0.8;
+    display: block;
+    font-style: italic;
   }
 `;
 
@@ -316,7 +331,7 @@ const CV: React.FC = () => {
       <Wrapper>
         <Intro>
           <div className="portrait">
-            <Portrait />
+            <img src={resume.basics.picture} alt="Profile Picture" />
           </div>
           <IntroText>
             <h1>{resume.basics.name}</h1>
@@ -382,13 +397,6 @@ const CV: React.FC = () => {
 
                 {w.summary && <p className="faded">{w.summary}</p>}
 
-                {w.quotes?.map((q) => (
-                  <Quote>
-                    {q.text}
-                    <span>— {q.author}</span>
-                  </Quote>
-                ))}
-
                 <h6>Tasks / Highlights:</h6>
                 <ul className="tasks">
                   {w.highlights.map((h) => (
@@ -449,7 +457,7 @@ const CV: React.FC = () => {
         </section>
 
         <section>
-          <h2>Open Source Projects</h2>
+          <h2>Projects</h2>
           <ExperienceList>
             {allProjectsYaml.nodes.map((p) => (
               <li>
@@ -484,12 +492,22 @@ const CV: React.FC = () => {
           </ExperienceList>
         </section>
 
-        <HireMe>
+        <section>
+          <h2>What It's like to Work with Me</h2>
+          {resume.quotes.map((q) => (
+            <Quote>
+              {q.text}
+              <span>— {q.author}</span>
+            </Quote>
+          ))}
+        </section>
+
+        <HireMe className="print-hidden">
           <h3>Like What You See?</h3>
           <a href="mailto:leo@leolabs.org">Hire Me 🚀</a>
         </HireMe>
 
-        <Footer>
+        <Footer className="print-hidden">
           <p>Made by Leo Bernard</p>
           <a
             download

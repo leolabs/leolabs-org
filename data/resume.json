@@ -2,7 +2,7 @@
   "basics": {
     "name": "Leo Bernard",
     "label": "Software Engineer",
-    "picture": "https://secure.gravatar.com/avatar/483ab9eaf44f0c80139a4bd8cd24bc13?size=800",
+    "picture": "/assets/portrait.jpg",
     "email": "leo@leolabs.org",
     "phone": "+31 6 82728713",
     "website": "https://leolabs.org",
@@ -43,6 +43,10 @@
       ]
     },
     {
+      "title": "Databases",
+      "content": ["MySQL", "PostgreSQL", "SQLite", "MSSQL", "MongoDB", "Firebase"]
+    },
+    {
       "title": "Frameworks / Libraries",
       "content": [
         "React",
@@ -53,14 +57,10 @@
         "Polymer",
         "Express",
         "Electron",
-        "Styled Components",
         "Styled JSX",
+        "Styled Components",
         "Linaria"
       ]
-    },
-    {
-      "title": "Databases",
-      "content": ["MySQL", "PostgreSQL", "SQLite", "MSSQL", "MongoDB", "Firebase"]
     },
     {
       "title": "Infrastructure / Tools",
@@ -85,21 +85,11 @@
       "startDate": "2020-04-01",
       "endDate": "2021-11-01",
       "summary": "Tempo is an app that minimizes distractions and helps building healthy email habits.",
-      "quotes": [
-        {
-          "text": "Taking the role of full-stack developer, Leo has always been a very important asset to our team. I'm constantly impressed with his ability to deliver important key features to our product, from design concept to final implementation, in a more than satisfying period of time. He is a real talent in terms of taking advantage of modern technologies that allowed us to simplify implementations and improve the experience for our end users. As a team player, he has collaborated a lot with other team members, including myself, to write cleaner and more readable code.",
-          "author": "Henrique Ferreira, Co-Founder"
-        },
-        {
-          "text": "The most delightful thing I noticed in Leo was his ability to tackle any problem with serenity and optimism. He carefully considers all requirements, and also has a lot of skills outside his software expertise, which helps him coming up with great solutions. All tasks feel a lot easier when I know I have Leo on my side.",
-          "author": "Nicolas Gaborit, Software Engineer"
-        }
-      ],
       "highlights": [
-        "Implemented a new onboarding, accounts, better search, avatars, a newsletters tab, deeplinking, and more",
-        "Lead and implemented Dark Mode, including automatic conversion of emails to dark mode",
-        "Co-directed the transition to TypeScript",
-        "Improved the rendering of emails"
+        "Implemented a new onboarding, accounts, better search, avatars, a newsletters tab, deeplinking, and more.",
+        "Lead the development of Dark Mode, including automatic conversion of emails to dark mode.",
+        "Co-directed the transition to TypeScript and Firebase.",
+        "Improved the rendering of emails."
       ]
     },
     {
@@ -141,13 +131,7 @@
       "position": "Web Developer",
       "startDate": "2011-04-30",
       "endDate": "2018-09-30",
-      "summary": "Duplexmedia is a creative agency offering web development, design, and film production to medium-sized customers.",
-      "quotes": [
-        {
-          "text": "Leo was characterized by a high level of work motivation. He always delivered qualitatively and quantitatively good results. His way of working was always reliable, conscientious and very customer-oriented.",
-          "author": "Markus Mazur, CEO"
-        }
-      ],
+      "summary": "Duplexmedia is a creative agency offering web development, design, and film production.",
       "highlights": [
         "Developed websites and web applications for customers and internal usage.",
         "Introduced the team to new frameworks and tools like CodeIgniter, PhpStorm, YouTrack, and Git, optimizing dev workflows.",
@@ -218,6 +202,24 @@
       "location": "Webworker NRW Meetup",
       "date": "2018-03-01",
       "link": "https://hackmd.io/@leolabs/spas-with-web-components"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "We hired and had the pleasure of working with Leo for 18 months at Tempo. Leo helped us to overcome important technical challenges, and made essential contributions to the product. He's an incredible developer with a lot of experience. His optimism, eagerness, and humbleness make him an absolute pleasure to work with. Any company will be lucky to have him in the team.",
+      "author": "Onno Schwanen, Co-Founder at Tempo"
+    },
+    {
+      "text": "Taking the role of full-stack developer, Leo has always been a very important asset to our team. I'm constantly impressed with his ability to deliver important key features to our product, from design concept to final implementation, in a more than satisfying period of time. He is a real talent in terms of taking advantage of modern technologies that allowed us to simplify implementations and improve the experience for our end users. As a team player, he has collaborated a lot with other team members, including myself, to write cleaner and more readable code.",
+      "author": "Henrique Ferreira, Co-Founder at Tempo"
+    },
+    {
+      "text": "The most delightful thing I noticed in Leo was his ability to tackle any problem with serenity and optimism. He carefully considers all requirements, and also has a lot of skills outside his software expertise, which helps him coming up with great solutions. All tasks feel a lot easier when I know I have Leo on my side.",
+      "author": "Nicolas Gaborit, Software Engineer at Tempo"
+    },
+    {
+      "text": "Leo was characterized by a high level of work motivation. He always delivered qualitatively and quantitatively good results. His way of working was always reliable, conscientious and very customer-oriented.",
+      "author": "Markus Mazur, CEO at Duplexmedia"
     }
   ]
 }
