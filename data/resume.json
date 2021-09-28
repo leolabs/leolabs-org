@@ -83,7 +83,7 @@
       "website": "https://yourtempo.co",
       "position": "Full-Stack Software Engineer",
       "startDate": "2020-04-01",
-      "endDate": "2021-11-01",
+      "endDate": "2021-10-31",
       "summary": "Tempo is an app that minimizes distractions and helps building healthy email habits.",
       "highlights": [
         "Implemented a new onboarding, accounts, better search, avatars, a newsletters tab, deeplinking, and more.",
@@ -104,6 +104,19 @@
         "Creation of realistic prototypes in React and Framer.",
         "Management and development of websites and custom web apps for our legacy customers.",
         "Maintenance of SaaS infrastructure (Google Cloud, Firebase, AWS, Netlify)."
+      ]
+    },
+    {
+      "company": "DEKEMA GmbH",
+      "website": "https://dekema.com",
+      "position": "Full-Stack Software Engineer",
+      "startDate": "2018-07-01",
+      "summary": "DEKEMA produces smart furnaces and 3D printers for dental applications.",
+      "highlights": [
+        "Transitioned the website from WordPress to Gatsby.",
+        "Lead the development of analytical tools for uploaded furnace logs.",
+        "Implemented a service area where customers can manage their furnaces.",
+        "Developed a custom FTP server for legacy furnaces to access the service area."
       ]
     },
     {
