@@ -6,7 +6,7 @@
     "email": "leo@leolabs.org",
     "phone": "+31 6 82728713",
     "website": "https://leolabs.org",
-    "summary": "I am passionate about developing apps, websites and services that leverage the newest technologies to provide the best possible user experience.",
+    "summary": "I am passionate about developing apps, websites, and services that leverage the newest technologies to provide the best possible user experience.",
     "location": {
       "city": "Utrecht",
       "countryCode": "Netherlands"
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "company": "DEKEMA GmbH",
+      "company": "DEKEMA Dental-Keramiköfen GmbH",
       "website": "https://dekema.com",
       "position": "Full-Stack Software Engineer",
       "startDate": "2018-07-01",

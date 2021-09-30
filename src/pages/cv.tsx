@@ -49,11 +49,24 @@ const Wrapper = styled.main`
     }
   }
 
+  .print-shown {
+    display: none;
+  }
+
   @media print {
     zoom: 0.85;
 
     .print-hidden {
       display: none;
+    }
+
+    .print-shown {
+      display: flex;
+      margin-top: 10rem;
+    }
+
+    > section {
+      margin-top: 3rem;
     }
   }
 `;
@@ -124,6 +137,7 @@ const ContactDetail = styled.div`
 `;
 
 const SkillGrid = styled.div`
+  page-break-before: avoid;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
@@ -152,6 +166,7 @@ const SkillGrid = styled.div`
 `;
 
 const ExperienceList = styled.ul`
+  page-break-before: avoid;
   list-style: none;
   padding: 0;
 
@@ -287,11 +302,32 @@ const Footer = styled.footer`
   justify-content: space-between;
   margin-top: 4rem;
   padding: 2rem 1rem;
+  box-sizing: border-box;
+
   border-top: 1px solid var(--color-border);
 
   p {
     margin: 0;
-    margin-right: 1rem;
+  }
+`;
+
+const Header = styled.header`
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+
+  display: none;
+
+  @media print {
+    display: flex;
+    position: fixed;
+    bottom: -2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  p {
+    margin: 0;
   }
 `;
 
@@ -329,6 +365,14 @@ const CV: React.FC = () => {
   return (
     <Layout page="cv" title="CV" description={resume.basics.summary}>
       <Wrapper>
+        <Header>
+          <p>Updated: 2021-09-30</p>
+          <p>
+            View the CV online at{' '}
+            <a href="https://leolabs.org/cv">https://leolabs.org/cv</a>
+          </p>
+        </Header>
+
         <Intro>
           <div className="portrait">
             <img src={resume.basics.picture} alt="Profile Picture" />
@@ -438,7 +482,7 @@ const CV: React.FC = () => {
           </LanguageGrid>
         </section>
 
-        <section>
+        <section style={{ pageBreakBefore: 'always' }}>
           <h2>Public Speaking</h2>
           <ExperienceList>
             {resume.publicSpeaking.map((s) => (
