@@ -387,7 +387,10 @@ const CV: React.FC = () => {
         <Contact>
           <ContactDetail>
             <MapPin />
-            <a href="https://www.google.com/maps/search/aachen" target="_blank">
+            <a
+              href="https://www.google.com/maps/search/utrecht+netherlands"
+              target="_blank"
+            >
               {resume.basics.location.city}, {resume.basics.location.countryCode}
             </a>
           </ContactDetail>
@@ -441,7 +444,7 @@ const CV: React.FC = () => {
 
                 {w.summary && <p className="faded">{w.summary}</p>}
 
-                <h6>Tasks / Highlights:</h6>
+                <h6>Highlights:</h6>
                 <ul className="tasks">
                   {w.highlights.map((h) => (
                     <li>{h}</li>
