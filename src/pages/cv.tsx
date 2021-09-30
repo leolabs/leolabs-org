@@ -388,7 +388,7 @@ const CV: React.FC = () => {
           <ContactDetail>
             <MapPin />
             <a
-              href="https://www.google.com/maps/search/utrecht+netherlands"
+              href={`https://www.google.com/maps/search/${resume.basics.location.city}+${resume.basics.location.countryCode}`}
               target="_blank"
             >
               {resume.basics.location.city}, {resume.basics.location.countryCode}
