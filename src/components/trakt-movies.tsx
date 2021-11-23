@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MediaGrid, Medium, MediumTitle } from './media-grid';
-import GatsbyImage from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const generateLink = (slug: string) => `https://trakt.tv/movies/${slug}`;
 
@@ -10,37 +10,31 @@ interface TraktMoviesProps {
 }
 
 export const TraktMovies: React.FC<TraktMoviesProps> = ({ limit }) => {
-  const movies = useStaticQuery(graphql`
-    query {
-      allTraktWatchedMovie(
-        limit: 6
-        sort: { fields: last_watched_at, order: DESC }
-      ) {
-        edges {
-          node {
-            last_watched_at(fromNow: true)
-            movie {
-              ids {
-                slug
-              }
-            }
-            tmdb_metadata {
-              title
-              poster {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 300, maxHeight: 450, quality: 90) {
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                }
+  const movies = useStaticQuery(graphql`{
+  allTraktWatchedMovie(limit: 6, sort: {fields: last_watched_at, order: DESC}) {
+    edges {
+      node {
+        last_watched_at(fromNow: true)
+        movie {
+          ids {
+            slug
+          }
+        }
+        tmdb_metadata {
+          title
+          poster {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 300, height: 450, quality: 90, layout: CONSTRAINED)
               }
             }
           }
         }
       }
     }
-  `);
+  }
+}
+`);
 
   return (
     <MediaGrid>
@@ -56,9 +50,8 @@ export const TraktMovies: React.FC<TraktMoviesProps> = ({ limit }) => {
             key={e.node.movie.ids.slug}
           >
             <GatsbyImage
-              fluid={e.node.tmdb_metadata.poster.localFile.childImageSharp.fluid}
-              alt={`Movie poster for ${e.node.tmdb_metadata.title}`}
-            />
+              image={e.node.tmdb_metadata.poster.localFile.childImageSharp.gatsbyImageData}
+              alt={`Movie poster for ${e.node.tmdb_metadata.title}`} />
             <MediumTitle>{e.node.last_watched_at}</MediumTitle>
           </Medium>
         ))}

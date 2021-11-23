@@ -205,7 +205,7 @@ export default ({ data }) => {
       image={
         post.frontmatter.image
           ? process.env.GATSBY_SITE_URL +
-            post.frontmatter.image.childImageSharp.fixed.src
+            post.frontmatter.image.childImageSharp.gatsbyImageData.src
           : undefined
       }
     >
@@ -228,24 +228,21 @@ export default ({ data }) => {
   );
 };
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      excerpt
-      timeToRead
-      frontmatter {
-        date(formatString: "MMMM D, YYYY")
-        description
-        title
-        image {
-          childImageSharp {
-            fixed(width: 1200, quality: 90) {
-              src
-            }
-          }
+export const query = graphql`query ($slug: String!) {
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    html
+    excerpt
+    timeToRead
+    frontmatter {
+      date(formatString: "MMMM D, YYYY")
+      description
+      title
+      image {
+        childImageSharp {
+          gatsbyImageData(width: 1200, quality: 90, placeholder: BLURRED, layout: FIXED)
         }
       }
     }
   }
+}
 `;

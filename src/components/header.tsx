@@ -53,7 +53,7 @@ const MenuItem = styled(Link)`
 export const Header: React.FC<{ page: string }> = ({ page }) => (
   <StyledHeader>
     <Container>
-      <Title to="/">Hi, I'm Leo.</Title>
+      <Title to="/">Hi, I'm Léo.</Title>
       <Menu>
         <MenuItem to="/" activeClassName="active">
           About Me

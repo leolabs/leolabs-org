@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MediaGrid, Medium, MediumTitle } from './media-grid';
-import GatsbyImage from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 interface SpotifyPlaylistsProps {
   featured: string[];
@@ -9,7 +9,7 @@ interface SpotifyPlaylistsProps {
 
 export const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ featured }) => {
   const playlists = useStaticQuery(graphql`
-    query {
+    {
       allSpotifyPlaylist(filter: { owner: { id: { eq: "leolabs" } } }) {
         edges {
           node {
@@ -21,9 +21,12 @@ export const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ featured }) 
             image {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 300, maxHeight: 300, quality: 90) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(
+                    width: 600
+                    height: 600
+                    quality: 90
+                    layout: CONSTRAINED
+                  )
                 }
               }
             }
@@ -36,8 +39,8 @@ export const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ featured }) 
   return (
     <MediaGrid>
       {playlists.allSpotifyPlaylist.edges
-        .filter(e => featured.includes(e.node.uri))
-        .map(e => (
+        .filter((e) => featured.includes(e.node.uri))
+        .map((e) => (
           <Medium
             title={`${e.node.name}`}
             target="_blank"
@@ -45,7 +48,7 @@ export const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ featured }) 
             key={e.node.external_urls.spotify}
           >
             <GatsbyImage
-              fluid={e.node.image.localFile.childImageSharp.fluid}
+              image={e.node.image.localFile.childImageSharp.gatsbyImageData}
               alt={`Album cover for ${e.node.name}`}
             />
             <MediumTitle>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { dimensions } from '../util/theme';
 import React, { useState, ComponentProps } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import GatsbyImage from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import TwitterIcon from '../images/social-icons/twitter.svg';
 import TraktTvIcon from '../images/social-icons/trakt-tv.svg';
@@ -138,12 +138,10 @@ export const Portrait: React.FC = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   const image = useStaticQuery(graphql`
-    query {
+    {
       file(base: { eq: "portrait-square.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(quality: 90, layout: FULL_WIDTH)
         }
       }
     }
@@ -152,7 +150,10 @@ export const Portrait: React.FC = () => {
   return (
     <PortraitCircle>
       <PortraitSizer>
-        <Image fluid={image.file.childImageSharp.fluid} />
+        <Image
+          image={image.file.childImageSharp.gatsbyImageData}
+          alt="Portrait of Léo"
+        />
         <Video
           autoPlay
           muted
@@ -173,9 +174,9 @@ export const Portrait: React.FC = () => {
 
 const IntroContent = () => (
   <>
-    <h2>Hey there! My name is Leo Bernard.</h2>
+    <h2>Hey there! My name is Léo Bernard.</h2>
     <p>
-      I'm a Mu­si­cian and Developer at <a href="https://yourtempo.co">Tempo</a>.
+      I'm a Mu­si­cian and Developer.
       <br />I love Mu­sic, Movies, Com­put­ers, and Cats.
     </p>
   </>
