@@ -26,7 +26,7 @@
     "gatsby-remark-prismjs": "^6.2.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^4.2.0",
-    "gatsby-source-spotify": "^1.3.2",
+    "gatsby-source-spotify": "^2.0.0",
     "gatsby-source-trakt-tmdb": "^1.2.0",
     "gatsby-transformer-remark": "^5.2.0",
     "gatsby-transformer-sharp": "^4.2.0",

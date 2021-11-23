@@ -3212,7 +3212,7 @@ callsites@^3.0.0:
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
-camel-case@4.1.2:
+camel-case@4.1.2, camel-case@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/camel-case/-/camel-case-4.1.2.tgz#9728072a954f805228225a6deea6b38461e1bd5a"
   integrity sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==
@@ -5548,6 +5548,14 @@ gatsby-node-helpers@^0.3.0:
     lodash "^4.17.4"
     p-is-promise "^1.1.0"
 
+gatsby-node-helpers@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-node-helpers/-/gatsby-node-helpers-1.2.1.tgz#9d21adcaa2e02baa67d4bdf16a3bb27a3a84d553"
+  integrity sha512-fYNQhp7/3sBUkb9QR31CZm6XChN2A78npow/PNglx5U1Sv8Zmd07Io8Mc2K7UO2hUCCSuAmgkSqlqq71NupdQA==
+  dependencies:
+    camel-case "^4.1.2"
+    pascal-case "^3.1.2"
+
 gatsby-page-utils@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-2.2.0.tgz#efa6e3a0749efd9196e1ee705a110d238b8635fa"
@@ -5844,7 +5852,7 @@ gatsby-remark-relative-images@^2.0.2:
     traverse "0.6.6"
     unist-util-select "3.0.1"
 
-gatsby-source-filesystem@^2.0.22, gatsby-source-filesystem@^2.1.8:
+gatsby-source-filesystem@^2.0.22:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.11.1.tgz#c90f49c096c4bdafd8e68462966b3a6e21fd746b"
   integrity sha512-Ao526Mmhm8KkF+0Tvf9Le5kKnqX7kgC1wecp82BW2KLQgdtG7UIgmHvG6PkjuFNiJ2ghXPC3vRK3J/vDPyLtkA==
@@ -5863,7 +5871,7 @@ gatsby-source-filesystem@^2.0.22, gatsby-source-filesystem@^2.1.8:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-source-filesystem@^4.2.0:
+gatsby-source-filesystem@^4.0.0, gatsby-source-filesystem@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.2.0.tgz#165f4da48167c9db87579e4a558eae1264d6f1f1"
   integrity sha512-+KKyjPP2M9WaP/KsClRPdrv7wy4MtFo64WWy4A+zA7cL7Bk1b7DMJprLFYG2DHQ85ObCQdmUc257R1+otnnxQQ==
@@ -5882,15 +5890,15 @@ gatsby-source-filesystem@^4.2.0:
     valid-url "^1.0.9"
     xstate "^4.25.0"
 
-gatsby-source-spotify@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-spotify/-/gatsby-source-spotify-1.3.2.tgz#15f6b9bc5143ef4ca5dad5d3586102dc2a1900b3"
-  integrity sha512-NOi6qwSgzTTuD39WjOCRkl2zuyhTHIIESUz5/+FkOdo2PFHO7YTVFry6Juzt3S+FZrZIgE2JtbKEJJnzAsu+1g==
+gatsby-source-spotify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-spotify/-/gatsby-source-spotify-2.0.0.tgz#b96605f76684a1cfc10ddf907803f4ee71481baa"
+  integrity sha512-24I1AkWNO2L2dOSywdJR17hpqPgwYZKYJIeCMCUcOltdpD8QiCHbsJGZGygWDVoaVgJJ43Bs0qTTvZTgqUYCcQ==
   dependencies:
     "@types/open" "^6.2.1"
     commander "^2.20.0"
-    gatsby-node-helpers "^0.3.0"
-    gatsby-source-filesystem "^2.1.8"
+    gatsby-node-helpers "^1.2.1"
+    gatsby-source-filesystem "^4.0.0"
     inquirer "^6.5.0"
     node-fetch "^2.6.0"
     open "^6.4.0"
