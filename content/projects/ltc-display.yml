@@ -1,5 +1,5 @@
 name: LTC Display for Ableton Live
 url: https://store.leolabs.org/l/ltc-display
-languages: [Rust, Max for Live]
+languages: [Rust, Max]
 date: 2021-12-24
 description: Decodes the LTC timecode embedded in an audio signal and displays it

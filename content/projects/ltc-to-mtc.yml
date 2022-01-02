@@ -1,0 +1,6 @@
+name: LTC to MTC Converter for Ableton Live
+url: https://store.leolabs.org/l/ltc-to-mtc
+languages: [Rust, Max]
+date: 2021-12-28
+description:
+  Decodes the LTC timecode embedded in an audio signal and converts it to MTC
