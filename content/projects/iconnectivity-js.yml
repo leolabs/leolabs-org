@@ -1,0 +1,6 @@
+name: iConnectivity JS
+url: https://github.com/leolabs/iconnectivity-js
+languages: [TS]
+date: 2022-07-16
+description:
+  A wrapper around Web MIDI to communicate with iConnectivity audio devices
