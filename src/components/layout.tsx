@@ -30,6 +30,9 @@ export const Layout: React.FC<LayoutProps> = (props) => {
         {props.image && <meta name="og:image" content={props.image} />}
         <meta name="twitter:site" content="@leolabs_org" />
         <meta name="twitter:creator" content="@leolabs_org" />
+        <link rel="me" href="https://mastodon.social/@leolabs">
+          Mastodon
+        </link>
         <script
           async
           defer
