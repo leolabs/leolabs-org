@@ -7,7 +7,6 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://leolabs.org',
   },
-  trailingSlash: "always",
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
