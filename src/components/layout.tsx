@@ -9,6 +9,7 @@ interface LayoutProps {
   useRawTitle?: boolean;
   description?: string;
   image?: string;
+  children: React.ReactElement
 }
 
 export const Layout: React.FC<LayoutProps> = (props) => {

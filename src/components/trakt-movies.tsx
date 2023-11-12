@@ -11,7 +11,7 @@ interface TraktMoviesProps {
 
 export const TraktMovies: React.FC<TraktMoviesProps> = ({ limit }) => {
   const movies = useStaticQuery(graphql`{
-  allTraktWatchedMovie(limit: 6, sort: {fields: last_watched_at, order: DESC}) {
+  allTraktWatchedMovie(limit: 6, sort: {last_watched_at: DESC}) {
     edges {
       node {
         last_watched_at(fromNow: true)

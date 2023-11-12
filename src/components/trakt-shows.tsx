@@ -47,7 +47,7 @@ interface TraktShowsProps {
 
 export const TraktShows: React.FC<TraktShowsProps> = ({ limit }) => {
   const shows = useStaticQuery(graphql`{
-  allTraktWatchedShow(limit: 6, sort: {fields: last_watched_at, order: DESC}) {
+  allTraktWatchedShow(limit: 6, sort: {last_watched_at: DESC}) {
     edges {
       node {
         last_watched_at(fromNow: true)
