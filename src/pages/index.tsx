@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { Intro } from '../components/intro';
 import { LatestPosts } from '../components/latest-posts';
 import { Projects } from '../components/projects';
-import { SpotifyPlaylists } from '../components/spotify-playlists';
-import { SpotifyTracks } from '../components/spotify-tracks';
 import { TraktMovies } from '../components/trakt-movies';
 import { TraktShows } from '../components/trakt-shows';
 
@@ -58,16 +56,6 @@ const IndexPage = () => {
           <Projects />
         </div>
       </SplitSection>
-
-      <Section>
-        <h3>Featured Playlists</h3>
-        <SpotifyPlaylists featured={featuredPlaylists} />
-      </Section>
-
-      <Section>
-        <h3>Music I'm listening to</h3>
-        <SpotifyTracks />
-      </Section>
 
       <Section>
         <h3>Movies I watched</h3>

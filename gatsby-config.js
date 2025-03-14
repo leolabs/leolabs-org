@@ -92,15 +92,6 @@ module.exports = {
         limit: 8,
       },
     },
-    {
-      resolve: `gatsby-source-spotify`,
-      options: {
-        clientId: process.env.SPOTIFY_CLIENT_ID,
-        clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-        refreshToken: process.env.SPOTIFY_REFRESH_TOKEN,
-        fetchPlaylists: true,
-      },
-    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify`,
   ],
