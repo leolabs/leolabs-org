@@ -4,7 +4,6 @@ import React, { useState, ComponentProps } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-import TwitterIcon from '../images/social-icons/twitter.svg';
 import TraktTvIcon from '../images/social-icons/trakt-tv.svg';
 import SpotifyIcon from '../images/social-icons/spotify.svg';
 import GitHubIcon from '../images/social-icons/github.svg';
@@ -183,7 +182,6 @@ const IntroContent = () => (
 );
 
 const socials = [
-  { icon: TwitterIcon, title: 'Twitter', href: 'https://twitter.com/leolabs_org' },
   { icon: GitHubIcon, title: 'GitHub', href: 'https://github.com/leolabs' },
   { icon: GumroadIcon, title: 'Gumroad', href: 'https://store.leolabs.org/' },
   {

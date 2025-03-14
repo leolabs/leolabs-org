@@ -2,15 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-  Linkedin,
-  GitHub,
-  Twitter,
-  MapPin,
-  Mail,
-  Phone,
-  ExternalLink,
-} from 'react-feather';
+import { Linkedin, GitHub, MapPin, Mail, Phone, ExternalLink } from 'react-feather';
 import { Layout } from '../components/layout';
 
 import resume from '../../data/resume.json';
@@ -273,8 +265,12 @@ const HireMe = styled.div`
     background: var(--color-brand);
     padding: 0.8rem 1.2rem;
     border-radius: 0.5rem;
-    transition: opacity 0.5s, box-shadow 0.5s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition:
+      opacity 0.5s,
+      box-shadow 0.5s;
+    box-shadow:
+      0 3px 6px rgba(0, 0, 0, 0.16),
+      0 3px 6px rgba(0, 0, 0, 0.23);
 
     :after {
       display: block;
@@ -291,7 +287,9 @@ const HireMe = styled.div`
       :after {
         animation: pulse 1s;
       }
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23);
     }
   }
 `;
@@ -334,7 +332,6 @@ const Header = styled.header`
 const socialIcons = {
   LinkedIn: Linkedin,
   GitHub: GitHub,
-  Twitter: Twitter,
 };
 
 const SocialIcon: React.FC<{ network: keyof typeof socialIcons | string }> = ({
